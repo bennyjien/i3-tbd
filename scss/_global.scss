@@ -316,6 +316,10 @@
 
 .wrapper {
 	@include wrapper;
+
+	&.wrapper-small {
+		max-width: 800px;
+	}
 }
 
 .unwrapper {
