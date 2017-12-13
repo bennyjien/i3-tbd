@@ -4,8 +4,8 @@
         background-position: center !important;
 
         .wrapper {
-            padding-left: 32px;
-            padding-right: 32px;
+            padding-left: 16px;
+            padding-right: 16px;
         }
 
         &::after {
@@ -18,18 +18,34 @@
             right: 0;
             background-color: rgba(0,0,0,0.3);
         }
+
+        @include breakpoint(crawler) {
+            .wrapper {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+        }
     }
 
     .contact-page-container {
-        display: flex;
+        display: block;
         position: relative;
         z-index: 1;
+
+        @include breakpoint(walker) {
+            display: flex;
+        }
 
         .contact-info {
             display: block;
             padding-right: 32px;
-            width: 50%;
+            width: 100%;
             color: $color-100;
+            margin-bottom: 48px;
+
+            @include breakpoint(walker) {
+                width: 50%;
+            }
 
             .contact-info-header {
                 margin-bottom: 12px;
@@ -45,16 +61,24 @@
 
         .contact-form {
             display: table;
-            width: 50%;
+            width: 100%;
+
+            @include breakpoint(walker) {
+                width: 50%;
+            }
 
             .contact-form-box {
                 display: block;
                 float: right;
                 width: 100%;
-                max-width: 500px;
-                padding: 24px 36px 28px;
+                padding: 24px 24px 28px;
                 border-radius: 6px;
                 background-color: #ffffff;
+
+                @include breakpoint(walker) {
+                    max-width: 500px;
+                    padding: 24px 36px 28px;
+                }
                 
                 .label {
                     margin-bottom: 6px;
