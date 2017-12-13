@@ -21,15 +21,24 @@
     }
 
     .contact-page-container {
-        display: flex;
+        display: block;
         position: relative;
         z-index: 1;
+
+        @include breakpoint(walker) {
+            display: flex;
+        }
 
         .contact-info {
             display: block;
             padding-right: 32px;
-            width: 50%;
+            width: 100%;
             color: $color-100;
+            margin-bottom: 32px;
+
+            @include breakpoint(walker) {
+                width: 50%;
+            }
 
             .contact-info-header {
                 margin-bottom: 12px;
@@ -45,16 +54,23 @@
 
         .contact-form {
             display: table;
-            width: 50%;
+            width: 100%;
+
+            @include breakpoint(walker) {
+                width: 50%;
+            }
 
             .contact-form-box {
                 display: block;
                 float: right;
                 width: 100%;
-                max-width: 500px;
                 padding: 24px 36px 28px;
                 border-radius: 6px;
                 background-color: #ffffff;
+
+                @include breakpoint(walker) {
+                    max-width: 500px;
+                }
                 
                 .label {
                     margin-bottom: 6px;
