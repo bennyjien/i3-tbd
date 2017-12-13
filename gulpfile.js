@@ -32,7 +32,6 @@ gulp.task('browserSync', function() {
 		server: {
 			baseDir: 'dist/',
 		},
-		browser: 'google chrome',
 		notify: {
 			styles: {
 				borderRadius: '8px 0 0',

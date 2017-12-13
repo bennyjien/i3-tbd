@@ -18,10 +18,15 @@
 .flickity-hero {
 
   .flickity-page-dots {
-    bottom: 32px;
+    bottom: -24px;
 
-    @include breakpoint(runner) {
+    @include breakpoint(walker) {
+      bottom: 16px;
       width: 33.333333333%;
+    }
+
+    @include breakpoint(jumper) {
+      bottom: 32px;
     }
   }
 }

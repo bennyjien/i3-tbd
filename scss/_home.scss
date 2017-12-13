@@ -68,8 +68,9 @@
 				height: 24px;
 				left: 0;
 				position: relative;
-				top: -1px;
+				top: -2px;
 				width: 24px;
+				vertical-align: middle;
 			}
 
 			&:after {
@@ -80,6 +81,14 @@
 
 			&:not(:last-child) {
 				margin-bottom: 4px;
+			}
+		}
+
+		.subheading {
+			@include font-size-400;
+
+			@include breakpoint(walker) {
+				@include font-size-500;
 			}
 		}
 	}

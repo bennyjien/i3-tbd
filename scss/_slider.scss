@@ -12,15 +12,27 @@
   }
 
   .slider-hero-slides {
-    margin: -12px;
+    margin: 0 -16px;
+
+    @include breakpoint(creeper) {
+      margin: 0 -24px;
+    }
+
+    @include breakpoint(crawler) {
+      margin: 0 -32px;
+    }
+
+    @include breakpoint(walker) {
+      margin: 0;
+    }
   }
 
   .slider-hero-slide {
     float: left;
-    padding: 12px;
     width: 100%;
 
     .link {
+      display: block;
       position: relative;
       text-decoration: none;
 
@@ -31,14 +43,32 @@
     }
 
     .text {
-      border: 2px solid $color-one-300;
-      flex: 0 0 33.333333333%;
+      background-color: rgba($color-one-100, 0.8);
+      bottom: 0;
       color: $color-text;
-      margin: 32px 0;
-      padding: 16px 24px 24px;
+      padding: 8px 16px;
+      position: absolute;
+      width: 100%;
+
+      @include breakpoint(crawler) {
+        padding: 16px;
+      }
+
+      @include breakpoint(walker) {
+        border: 2px solid $color-one-300;
+        flex: 0 0 auto;
+        margin: 32px 0;
+        padding: 16px;
+        position: relative;
+        width: 33.333333333%;
+      }
+
+      @include breakpoint(runner) {
+        padding: 16px 24px 24px;
+      }
 
       .categories {
-        margin-bottom: 8px;
+        margin-bottom: 4px;
       }
 
       .category {
@@ -48,15 +78,16 @@
       }
 
       .title {
-        @include font-size-h5;
+        @include font-size-h4;
         margin-bottom: 4px;
 
-        @include breakpoint(crawler) {
+        @include breakpoint(runner) {
           @include font-size-h2;
         }
       }
 
       .subtitle {
+        @include font-size-400;
         color: $color-text-light;
         display: none;
 
