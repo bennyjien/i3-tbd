@@ -1,0 +1,282 @@
+@at-root {
+	.site-container {
+		background-color: $white;
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		position: relative;
+		overflow-x: hidden;
+
+		&:before {
+			content: "";
+			background-color: $black;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			transition: opacity 0.2s ease-out;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
+	}
+
+	.site-header {
+		background-color: $white;
+		border-bottom: 1px solid $color-border-light;
+		flex: 0 0 auto;
+		position: relative;
+		width: 100%;
+		z-index: 8;
+	}
+
+	.site-content {
+		display: flex;
+		flex: 1 0 auto;
+		flex-direction: column;
+		position: relative;
+
+		> .inner {
+			display: flex;
+			flex: 1 1 auto;
+			flex-direction: column;
+			padding-bottom: 48px;
+			padding-top: 48px;
+			width: 100%;
+
+			@include breakpoint(runner) {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			&.inner-zero {
+				padding-bottom: 0;
+				padding-top: 0;
+			}
+		}
+	}
+
+	.site-footer {
+		background-color: $color-bg;
+		color: $white;
+		flex: 0 0 auto;
+		position: relative;
+		transition: all 0.3s ease-out;
+		width: 100%;
+		z-index: 4;
+
+		> .inner {
+			padding-bottom: 24px;
+			padding-top: 48px;
+		}
+
+		a {
+			color: $white;
+		}
+	}
+}
+
+@at-root {
+	.site-brand {
+		padding: 16px 0;
+
+		.wrapper {
+			display: flex;
+			justify-content: center;
+
+			@include breakpoint(runner) {
+				justify-content: space-between
+			}
+		}
+	}
+
+	.site-brand-cta {
+		display: none;
+		flex: 1 1 0;
+
+		@include breakpoint(runner) {
+			display: block;
+		}
+
+		.link {
+			@include font-size-300;
+			border: 1px solid $color-border-dark;
+			border-radius: 16px;
+			color: $color-text-light;
+			display: inline-block;
+			padding: 2px 12px;
+			text-transform: uppercase;
+			transition: all 0.2s ease;
+
+			&:hover,
+			&:focus {
+				color: $color-text;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.site-brand-logo {
+		flex: 0 1 auto;
+		padding: 0 24px;
+		max-width: 80%;
+
+		.logo {
+			display: block;
+
+			@include breakpoint(runner) {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.site-brand-pagenav {
+		display: none;
+		flex: 1 1 0;
+
+		@include breakpoint(runner) {
+			display: block;
+		}
+
+		.list {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.item {
+
+			&:not(:last-child) {
+				margin-right: 24px;
+			}
+		}
+
+		.link {
+			@include font-size-300;
+			color: $color-text;
+			font-weight: 400;
+			text-transform: uppercase;
+			transition: all 0.2s ease;
+
+			&:hover,
+			&:focus {
+				color: $color-one-600;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+@at-root {
+	.site-blognav {
+		display: none;
+
+		@include breakpoint(runner) {
+			display: block;
+		}
+
+		.list {
+			display: flex;
+			justify-content: center;
+			padding: 8px 0;
+		}
+
+		.item {
+			min-width: 0;
+
+			&:not(:last-child) {
+				margin-right: 20px;
+
+				@include breakpoint(jumper) {
+					margin-right: 24px;
+				}
+			}
+		}
+
+		.link {
+			@include ellipsis;
+			@include font-size-400;
+			color: $color-text;
+			display: block;
+			font-weight: 700;
+			padding: 4px 0;
+			text-transform: uppercase;
+			transition: all 0.2s ease;
+
+			&:hover,
+			&:focus {
+				color: $color-one-600;
+				text-decoration: none;
+			}
+		}
+
+		.icon {
+			height: 16px;
+			width: 16px;
+		}
+	}
+}
+
+@at-root {
+	.site-fatfoot {
+		display: flex;
+		margin-bottom: 48px;
+	}
+
+	.site-fatfoot-nav {
+		display: flex;
+		flex: 1 1 0;
+
+		.list {
+			flex: 0 1 192px;
+		}
+
+		.item {
+
+			a {
+				@include font-size-400;
+				display: block;
+				padding: 2px 0;
+			}
+		}
+	}
+
+	.site-fatfoot-social {
+		flex: 0 0 auto;
+
+		.list {
+			margin: 0 -8px -8px 0;
+		}
+
+		.item {
+			display: inline-block;
+			margin: 0 8px 8px 0;
+		}
+	}
+}
+
+@at-root {
+	.site-end {
+		@include font-size-300;
+		color: $color-400;
+		display: flex;
+
+		a {
+			color: $color-400;
+		}
+
+		.attribution {
+			flex: 1 1 0;
+			margin-bottom: 0;
+		}
+
+		.list {
+			flex: 0 0 auto;
+			margin: 0 -8px -8px 0;
+		}
+
+		.item {
+			display: inline-block;
+			margin: 0 8px 8px;
+		}
+	}
+}

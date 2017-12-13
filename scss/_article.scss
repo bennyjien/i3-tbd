@@ -1,0 +1,70 @@
+@at-root {
+	.article-overviews {
+		@include clearfix;
+		margin: -12px;
+	}
+
+	.article-overview {
+		float: left;
+		padding: 12px;
+		width: 33.333333333%;
+
+		.link {
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+
+				.title {
+					color: $color-one-600;
+				}
+			}
+		}
+	}
+
+	.article-overview-thumbnail {
+		margin-bottom: 8px;
+		position: relative;
+
+		.badge {
+			@include font-size-300;
+			background-color: $color-one-400;
+			color: $white;
+			font-weight: 700;
+			left: 0;
+			padding: 4px 8px;
+			position: absolute;
+			text-transform: uppercase;
+			top: 16px;
+		}
+	}
+
+	.article-overview-detail {
+		color: $color-text;
+
+		.categories {
+			margin-bottom: 2px;
+		}
+
+		.category {
+			font-family: $display;
+			text-transform: uppercase;
+		}
+
+		.title {
+			@include font-size-h4;
+			margin-bottom: 4px;
+			transition: all 0.2s ease;
+		}
+
+		.love {
+			@include font-size-400;
+			color: $color-text-light;
+			text-transform: uppercase;
+
+			.icon {
+				fill: $color-400;
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+@at-root {
+	.vendor-overviews {
+		@include clearfix;
+		margin: -12px;
+	}
+
+	.vendor-overview {
+		float: left;
+		padding: 12px;
+		width: 25%;
+	}
+
+	.vendor-overview-thumbnail {
+		margin-bottom: 8px;
+	}
+
+	.vendor-overview-detail {
+		color: $color-text;
+
+		.meta {
+			@include font-size-400;
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+
+		.name {
+			@include font-size-h3;
+		}
+	}
+}
+
+@at-root {
+	.vendor-categories {
+		display: flex;
+
+		.vendor-category {
+			flex: 1 1 0;
+
+			&:not(:first-child) {
+				margin-left: 24px;
+			}
+		}
+	}
+
+	.vendor-category {
+		background-color: $color-one-300;
+		position: relative;
+
+		&.vendor-category-more {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.name {
+			@include font-size-200;
+			background-color: rgba($white, 0.64);
+			bottom: 0;
+			color: $color-text;
+			left: 0;
+			font-weight: 700;
+			padding: 8px 4px;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			width: 100%;
+		}
+
+		.more {
+			@include font-size-400;
+			color: $color-one-700;
+			padding: 8px;
+			text-align: center;
+
+			.strong {
+				display: block;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+.flickity-page-dots {
+
+  .dot {
+    background: transparent;
+    border: 1px solid $color-one-500;
+    height: 12px;
+    margin: 0 4px;
+    opacity: 1;
+    transition: all 0.2s ease;
+    width: 12px;
+
+    &.is-selected {
+      background: $color-one-500;
+    }
+  }
+}
+
+.flickity-hero {
+
+  .flickity-page-dots {
+    bottom: 32px;
+
+    @include breakpoint(runner) {
+      width: 33.333333333%;
+    }
+  }
+}

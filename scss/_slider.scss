@@ -1,0 +1,109 @@
+@at-root {
+  .slider-hero {
+    background-color: lighten($color-one-100, 2%);
+    background-image: url("assets/images/bg-stripe.png");
+    position: relative;
+    top: -1px;
+    z-index: 9;
+
+    .wrapper {
+      @include clearfix;
+    }
+  }
+
+  .slider-hero-slides {
+    margin: -12px;
+  }
+
+  .slider-hero-slide {
+    float: left;
+    padding: 12px;
+    width: 100%;
+
+    .link {
+      position: relative;
+      text-decoration: none;
+
+      @include breakpoint(walker) {
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    .text {
+      border: 2px solid $color-one-300;
+      flex: 0 0 33.333333333%;
+      color: $color-text;
+      margin: 32px 0;
+      padding: 16px 24px 24px;
+
+      .categories {
+        margin-bottom: 8px;
+      }
+
+      .category {
+        color: $color-one-600;
+        font-family: $display;
+        text-transform: uppercase;
+      }
+
+      .title {
+        @include font-size-h5;
+        margin-bottom: 4px;
+
+        @include breakpoint(crawler) {
+          @include font-size-h2;
+        }
+      }
+
+      .subtitle {
+        color: $color-text-light;
+        display: none;
+
+        @include breakpoint(runner) {
+          display: block;
+        }
+      }
+    }
+
+    .image {
+      flex: 0 1 auto;
+
+      @include breakpoint(walker) {
+        margin-left: 32px;
+      }
+    }
+  }
+}
+
+@at-root {
+  .slider-instagram {}
+
+  .slider-instagram-head {
+    margin-bottom: 24px;
+
+    .title {
+      @include font-size-700;
+      color: $color-two-500;
+      font-weight: 400;
+      font-family: $display;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .icon {
+      fill: $color-two-400;
+      top: -2px;
+    }
+  }
+
+  .slider-instagram-slide {
+    float: left;
+    max-width: 320px;
+    width: 75%;
+
+    img {
+      width: 100%;
+    }
+  }
+}

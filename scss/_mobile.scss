@@ -1,0 +1,129 @@
+@at-root {
+	.mobile-nav {
+		background-color: $white;
+		display: none;
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		transition: all 0.2s ease-out;
+		transform: translateX(-100%);
+		width: 240px;
+		z-index: 11;
+
+		@include breakpoint(runner) {
+			display: none !important;
+		}
+
+		&.is-toggling,
+		&.is-untoggling {
+			display: block;
+		}
+
+		&.is-toggled {
+			display: block;
+			transform: translateX(0);
+		}
+
+		.list {
+			padding: 16px;
+		}
+
+		.item {
+			border-bottom: 1px solid $color-border-light;
+
+			&.item-current {
+
+				> .link {
+					color: $color-one-500;
+				}
+			}
+		}
+
+		.link {
+			color: $color-text;
+			display: block;
+			font-weight: 700;
+			padding: 8px 0;
+			text-decoration: none;
+			transition: all 0.2s ease;
+
+			&:hover,
+			&:focus {
+				color: $color-one-600;
+			}
+		}
+
+		.toggle {
+			position: relative;
+
+			&:before {
+				content: "";
+				background-image: url("../assets/images/symbols/icon-plus-light.svg");
+				background-position: center;
+				background-size: 12px 12px;
+				height: 12px;
+				position: absolute;
+				right: 0;
+				top: 12px;
+				width: 12px;
+			}
+
+			&.is-toggling,
+			&.is-toggled {
+
+				&:before {
+					background-image: url("../assets/images/symbols/icon-minus-light.svg");
+				}
+			}
+		}
+	}
+
+	.mobile-nav-is-toggled {
+
+		.site-container {
+
+			&:before {
+				opacity: 0.5;
+				visibility: visible;
+				z-index: 10;
+
+				@include breakpoint(runner) {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	.mobile-nav-is-untoggling {
+
+		.site-container {
+
+			&:before {
+				opacity: 0;
+				z-index: 10;
+			}
+		}
+	}
+
+	.mobile-nav-toggle {
+		color: $color-one-400;
+		display: block;
+		height: 24px;
+		left: 16px;
+		margin-top: -12px;
+		position: absolute;
+		top: 50%;
+		width: 24px;
+
+		@include breakpoint(runner) {
+			display: none;
+		}
+
+		.icon {
+			height: 100%;
+			padding: 2px;
+			width: 100%;
+		}
+	}
+}

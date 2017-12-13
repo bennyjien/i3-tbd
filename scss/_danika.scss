@@ -1,0 +1,43 @@
+@at-root {
+	.danika-flyer {
+		background-color: $color-danika-red;
+		margin-bottom: 112px;
+		margin-top: 112px;
+
+		.wrapper {
+			display: flex;
+		}
+	}
+
+	.danika-flyer-calculator {
+		border-bottom: 4px solid $color-danika-red;
+		border-top: 4px solid $color-danika-red;
+		flex: 0 0 auto;
+		margin-bottom: -48px;
+		margin-top: -48px;
+	}
+
+	.danika-flyer-detail {
+		color: $color-danika-white;
+		padding: 32px;
+
+		a {
+			color: $color-danika-white;
+		}
+
+		.name {
+			@include font-size-h1;
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+
+		.title {
+			@include font-size-800;
+			font-weight: 700;
+		}
+
+		.copy {
+			@include font-size-600;
+		}
+	}
+}

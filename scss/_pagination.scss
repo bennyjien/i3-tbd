@@ -1,0 +1,85 @@
+@at-root {
+	.pagination-nav {
+		align-items: center;
+		border-top: 1px solid $color-border;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 24px;
+		padding-top: 24px;
+
+		.a {
+			background-color: $color-one-500;
+			border-radius: 4px;
+			color: $white;
+			display: block;
+			min-width: 32px;
+			padding: 4px 8px;
+			position: relative;
+			text-align: center;
+			text-decoration: none;
+			transition: all 0.2s ease-out;
+
+			&:hover,
+			&:focus {
+				background-color: $color-one-400;
+				color: $white;
+			}
+		}
+
+		.item {
+			float: left;
+			margin-right: 4px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.item-current {
+
+				.a {
+					background-color: $color-500;
+					pointer-events: none;
+
+					&:hover,
+					&:focus {
+						background-color: $color-500;
+					}
+				}
+			}
+
+			&.item-inactive {
+
+				.a {
+					background-color: $color-one-300;
+					pointer-events: none;
+				}
+			}
+		}
+
+		.icon {
+			fill: $white;
+			height: 100%;
+			width: 24px;
+		}
+	}
+
+	.pagination-nav-list {
+		@include clearfix;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.pagination-nav-arrow {
+		@include clearfix;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		.a {
+			height: 32px;
+			padding: 0;
+			width: 32px;
+		}
+	}
+}

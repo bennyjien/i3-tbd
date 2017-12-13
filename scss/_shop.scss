@@ -1,0 +1,37 @@
+@at-root {
+	.shop-products {
+		display: flex;
+		padding-left: 48px;
+		padding-right: 48px;
+
+		.shop-product {
+
+			&:not(:last-child) {
+				margin-right: 24px;
+			}
+		}
+	}
+
+	.shop-product {
+		background-color: $white;
+		border: 1px solid $color-two-200;
+		padding: 16px 16px 32px;
+	}
+
+	.shop-product-thumbnail {
+		margin-bottom: 8px;
+	}
+
+	.shop-product-detail {
+
+		.name {
+			@include font-size-600;
+			margin-bottom: 2px;
+		}
+
+		.price {
+			@include font-size-600;
+			color: $color-text-light;
+		}
+	}
+}

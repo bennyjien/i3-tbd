@@ -1,0 +1,61 @@
+/*!
+Theme Name: The Bride Dept
+Theme URI: http://thebridedept.com
+Author: ICUBIC
+Author URI: http://icubic.co.id/
+Description: This site is infected with Gulper. Switching to another theme is not recommended since this theme is definitely more awesome.
+Version: 2.00
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive-layout, mobile-first
+*/
+
+// variables
+@import "variables";
+@import "mixins";
+
+// plugins
+@import "plugins/normalize";
+@import "plugins/flickity";
+@import "plugins/flickity-custom";
+@import "plugins/magnific-popup";
+@import "plugins/magnific-popup-custom";
+@import "plugins/stickyfill";
+@import "plugins/wordpress";
+
+// globals
+@import "reset";
+@import "global";
+@import "modifier";
+@import "keyframes";
+
+// containers
+@import "site";
+@import "widget";
+@import "popup";
+
+// main
+@import "main";
+
+// modules
+@import "account";
+@import "article";
+@import "contact";
+@import "event";
+@import "faq";
+@import "form";
+@import "home";
+@import "missing";
+@import "pagination";
+@import "search";
+@import "shop";
+@import "slider";
+@import "table";
+@import "toggle";
+@import "vendor";
+
+// media
+@import "mobile";
+@media print {
+  @import "print";
+}
