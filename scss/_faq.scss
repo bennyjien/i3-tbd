@@ -1,0 +1,15 @@
+@at-root {
+    .faq-item {
+        display: block;
+        margin-bottom: 32px;
+
+        .question {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

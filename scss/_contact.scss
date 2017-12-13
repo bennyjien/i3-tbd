@@ -1,0 +1,70 @@
+@at-root {
+    .contact-site-content {
+        background-size: cover !important;
+        background-position: center !important;
+
+        .wrapper {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.3);
+        }
+    }
+
+    .contact-page-container {
+        display: flex;
+        position: relative;
+        z-index: 1;
+
+        .contact-info {
+            display: block;
+            padding-right: 32px;
+            width: 50%;
+            color: $color-100;
+
+            .contact-info-header {
+                margin-bottom: 12px;
+    
+                .title {
+                    font-weight: 400;
+                }
+            }
+            .contact-info-content {
+                max-width: 400px;
+            }
+        }
+
+        .contact-form {
+            display: table;
+            width: 50%;
+
+            .contact-form-box {
+                display: block;
+                float: right;
+                width: 100%;
+                max-width: 500px;
+                padding: 24px 36px 28px;
+                border-radius: 6px;
+                background-color: #ffffff;
+                
+                .label {
+                    margin-bottom: 6px;
+                }
+
+                textarea {
+                    min-height: 150px;
+                    resize: none;
+                }
+            }
+        }
+    }
+}

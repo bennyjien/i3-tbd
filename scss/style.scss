@@ -38,7 +38,9 @@ Tags: responsive-layout, mobile-first
 @import "main";
 
 // modules
+@import "about";
 @import "account";
+@import "advertise";
 @import "article";
 @import "contact";
 @import "event";
@@ -46,6 +48,7 @@ Tags: responsive-layout, mobile-first
 @import "form";
 @import "home";
 @import "missing";
+@import "page";
 @import "pagination";
 @import "search";
 @import "shop";
