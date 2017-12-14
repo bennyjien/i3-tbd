@@ -1,0 +1,83 @@
+@at-root {
+  .events {
+    display: flex;
+    width: 100%;
+
+    .event {
+      border-left: 2px solid $color-two-200;
+      padding: 0 18px;
+      width: 14.29%;
+      
+      .event-date {
+        display: inline-block;
+        padding: 3px 6px 3px 20px;
+        min-width: 110px;
+        background-color: $color-two-100;
+        margin-left: -18px;
+        margin-bottom: 32px;
+  
+        p {
+          margin-bottom: 0;
+          font-family: $display;
+          text-transform: uppercase;
+          @include font-size-600;
+        }
+      }
+
+      .event-list {
+        .no-event {
+          @include font-size-600;
+          color: $color-500;
+          font-family: $display;
+          text-transform: uppercase;
+        }
+
+        .event-item {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $color-two-200;
+          }
+
+          .category {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: $color-300;
+            margin-bottom: 12px;
+            font-family: $display;
+            text-transform: uppercase;
+          }
+          .title {
+            margin-bottom: 8px;
+            @include font-size-500;
+          }
+
+          a {
+            @include font-size-400;
+          }
+        }
+      }
+    }
+  }
+
+  .event-pagination {
+    display: table;
+    width: 100%;
+
+    .pagination-left,
+    .pagination-right {
+      display: block;
+      font-weight: 700;
+      color: $color-600;
+      @include font-size-500;
+    }
+
+    .pagination-left {
+      float: left;
+    }
+
+    .pagination-right {
+      float: right;
+    }
+  }
+}
