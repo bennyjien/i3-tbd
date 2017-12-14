@@ -1,1 +1,32 @@
+@at-root {
+  .missin-page-container {
+    display: block;
+    text-align: center;
 
+    .missing-page-header {
+      margin-bottom: 24px;
+      color: $color-600;
+
+      .title {
+        font-family: $display;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-weight: 400;
+        @include font-size-jumbo;
+        line-height: 1;
+      }
+  
+      .subtitle {
+        font-family: $display;
+        @include font-size-800;
+      }
+    }
+
+    .missing-page-content {
+      p {
+        @include font-size-400;
+        color: $color-500;
+      }
+    }
+  }
+}
