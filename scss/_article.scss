@@ -1,13 +1,25 @@
 @at-root {
 	.article-overviews {
 		@include clearfix;
-		margin: -12px;
+		margin: -8px;
+
+		@include breakpoint(crawler) {
+			margin: -12px;
+		}
+
+		.article-overview {
+			float: left;
+			padding: 8px;
+			width: 50%;
+
+			@include breakpoint(crawler) {
+				padding: 12px;
+				width: 33.333333333%;
+			}
+		}
 	}
 
 	.article-overview {
-		float: left;
-		padding: 12px;
-		width: 33.333333333%;
 
 		.link {
 			text-decoration: none;
@@ -52,9 +64,13 @@
 		}
 
 		.title {
-			@include font-size-h4;
+			@include font-size-h5;
 			margin-bottom: 4px;
 			transition: all 0.2s ease;
+
+			@include breakpoint(runner) {
+				@include font-size-h4;
+			}
 		}
 
 		.love {

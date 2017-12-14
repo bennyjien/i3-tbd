@@ -1,13 +1,26 @@
 @at-root {
 	.shop-products {
 		display: flex;
-		padding-left: 48px;
-		padding-right: 48px;
+		margin: 0 auto;
+		max-width: 880px;
 
 		.shop-product {
+			flex: 1 1 0;
 
-			&:not(:last-child) {
-				margin-right: 24px;
+			&:not(:first-child) {
+				margin-left: 16px;
+
+				@include breakpoint(runner) {
+					margin-left: 24px;
+				}
+			}
+
+			&:last-child {
+				display: none;
+
+				@include breakpoint(crawler) {
+					display: block;
+				}
 			}
 		}
 	}
@@ -15,7 +28,11 @@
 	.shop-product {
 		background-color: $white;
 		border: 1px solid $color-two-200;
-		padding: 16px 16px 32px;
+		padding: 8px 8px 16px;
+
+		@include breakpoint(walker) {
+			padding: 16px 16px 32px;
+		}
 	}
 
 	.shop-product-thumbnail {
@@ -25,13 +42,29 @@
 	.shop-product-detail {
 
 		.name {
-			@include font-size-600;
+			@include font-size-400;
 			margin-bottom: 2px;
+
+			@include breakpoint(creeper) {
+				@include font-size-500;
+			}
+
+			@include breakpoint(runner) {
+				@include font-size-600;
+			}
 		}
 
 		.price {
-			@include font-size-600;
+			@include font-size-400;
 			color: $color-text-light;
+
+			@include breakpoint(creeper) {
+				@include font-size-500;
+			}
+
+			@include breakpoint(runner) {
+				@include font-size-600;
+			}
 		}
 	}
 }

@@ -32,12 +32,22 @@
 @at-root {
 	.vendor-categories {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: -8px;
+
+		@include breakpoint(runner) {
+			flex-wrap: nowrap;
+		}
 
 		.vendor-category {
-			flex: 1 1 0;
+			flex: 0 1 auto;
+			margin: 8px;
+			max-width: 192px;
+			width: calc(50% - 16px);
 
-			&:not(:first-child) {
-				margin-left: 24px;
+			@include breakpoint(crawler) {
+				width: calc(33.333333333% - 16px);
 			}
 		}
 	}
@@ -68,9 +78,18 @@
 
 		.more {
 			@include font-size-400;
-			color: $color-one-700;
 			padding: 8px;
 			text-align: center;
+
+			a {
+				color: $color-one-600;
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					color: $color-one-700;
+				}
+			}
 
 			.strong {
 				display: block;
