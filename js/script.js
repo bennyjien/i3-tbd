@@ -11,9 +11,17 @@ jQuery(document).ready(function($) {
 
 	// initialize Flickity
 	$('.js-slider-hero').find('.slider-hero-slides').flickity({
-		imagesLoaded: true,
+		autoPlay: 4000,
 		dragThreshold: 8,
-		prevNextButtons: false,
+		imagesLoaded: true,
+		prevNextButtons: false
+	});
+
+	$('.js-article-overviews-carousel').flickity({
+		contain: true,
+		groupCells: true,
+		imagesLoaded: true,
+		pageDots: false,
 		arrowShape: 'M98 50.25c0 2.761-2.239 5-5 5h-72.951l22.657 22.719c1.95 1.956 1.946 5.121-.009 7.071-.976.974-2.254 1.46-3.531 1.46-1.281 0-2.564-.49-3.54-1.469l-31.166-31.25c-1.946-1.952-1.946-5.11 0-7.062l31.166-31.25c1.95-1.955 5.115-1.959 7.071-.009 1.955 1.95 1.959 5.115.009 7.071l-22.657 22.719h72.951c2.761 0 5 2.239 5 5'
 	});
 

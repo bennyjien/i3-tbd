@@ -6,7 +6,11 @@
 		.section {
 
 			&:not(:last-child) {
-				margin-bottom: 64px;
+				margin-bottom: 48px;
+
+				@include breakpoint(creeper) {
+					margin-bottom: 64px;
+				}
 			}
 
 			&.section-highlight {

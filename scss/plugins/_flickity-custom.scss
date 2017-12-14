@@ -15,7 +15,61 @@
   }
 }
 
+.flickity-prev-next-button {
+  background-color: transparent;
+  height: 16px;
+  padding: 0;
+  width: 16px;
+
+  @include breakpoint(creeper) {
+    height: 24px;
+    width: 24px;
+  }
+
+  @include breakpoint(runner) {
+    height: 40px;
+    width: 40px;
+  }
+
+  &:disabled {
+    opacity: 0.24;
+  }
+
+  &.previous {
+    left: -8px;
+
+    @include breakpoint(creeper) {
+      left: -16px;
+    }
+
+    @include breakpoint(runner) {
+      left: -32px;
+    }
+  }
+
+  &.next {
+    right: -8px;
+
+    @include breakpoint(creeper) {
+      right: -16px;
+    }
+
+    @include breakpoint(runner) {
+      right: -32px;
+    }
+  }
+
+  .arrow {
+    fill: $color-600;
+  }
+}
+
 .flickity-hero {
+  border-bottom: 24px solid $white;
+
+  @include breakpoint(walker) {
+    border-bottom: 0;
+  }
 
   .flickity-page-dots {
     bottom: -24px;

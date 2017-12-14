@@ -67,7 +67,11 @@
 
 		> .inner {
 			padding-bottom: 24px;
-			padding-top: 48px;
+			padding-top: 32px;
+
+			@include breakpoint(creeper) {
+				padding-top: 48px;
+			}
 		}
 
 		a {
@@ -218,16 +222,30 @@
 
 @at-root {
 	.site-fatfoot {
-		display: flex;
-		margin-bottom: 48px;
+		margin-bottom: 32px;
+
+		@include breakpoint(crawler) {
+			display: flex;
+			margin-bottom: 48px;
+		}
 	}
 
 	.site-fatfoot-nav {
 		display: flex;
 		flex: 1 1 0;
+		margin: -8px;
 
 		.list {
 			flex: 0 1 192px;
+			margin: 8px;
+
+			&.list-blog {
+				display: none;
+
+				@include breakpoint(walker) {
+					display: block;
+				}
+			}
 		}
 
 		.item {
@@ -242,6 +260,11 @@
 
 	.site-fatfoot-social {
 		flex: 0 0 auto;
+		margin-top: 16px;
+
+		@include breakpoint(crawler) {
+			margin-top: 0;
+		}
 
 		.list {
 			margin: 0 -8px -8px 0;
@@ -258,7 +281,12 @@
 	.site-end {
 		@include font-size-300;
 		color: $color-400;
-		display: flex;
+		text-align: center;
+
+		@include breakpoint(crawler) {
+			display: flex;
+			text-align: left;
+		}
 
 		a {
 			color: $color-400;
@@ -266,7 +294,11 @@
 
 		.attribution {
 			flex: 1 1 0;
-			margin-bottom: 0;
+			margin-bottom: 4px;
+
+			@include breakpoint(crawler) {
+				margin-bottom: 0;
+			}
 		}
 
 		.list {

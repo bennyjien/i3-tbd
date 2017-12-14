@@ -55,11 +55,16 @@
 		color: $color-text;
 
 		.categories {
+			@include font-size-400;
+			font-family: $display;
 			margin-bottom: 2px;
+
+			@include breakpoint(creeper) {
+				@include font-size-500;
+			}
 		}
 
 		.category {
-			font-family: $display;
 			text-transform: uppercase;
 		}
 
