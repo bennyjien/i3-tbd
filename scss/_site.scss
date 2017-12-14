@@ -171,6 +171,55 @@
 }
 
 @at-root {
+	.site-search {
+		background-color: $color-100;
+		display: none;
+
+		.input {
+			@include font-size-600;
+			background-color: transparent;
+			border: none;
+			box-shadow: none;
+			padding: 12px 0;
+			width: 100%;
+		}
+
+		::placeholder {
+			color: $color-text-light;
+		}
+	}
+
+	.site-search-toggle {
+		height: 24px;
+		width: 24px;
+
+		&.site-search-toggle-mobile {
+			margin-top: -12px;
+			position: absolute;
+			right: 16px;
+			top: 50%;
+
+			@include breakpoint(creeper) {
+				right: 24px;
+			}
+
+			@include breakpoint(crawler) {
+				right: 32px;
+			}
+
+			@include breakpoint(runner) {
+				display: none;
+			}
+		}
+
+		.icon {
+			height: 20px;
+			width: 20px;
+		}
+	}
+}
+
+@at-root {
 	.site-blognav {
 		display: none;
 
@@ -211,11 +260,11 @@
 				color: $color-one-600;
 				text-decoration: none;
 			}
-		}
 
-		.icon {
-			height: 16px;
-			width: 16px;
+			.icon {
+				height: 16px;
+				width: 16px;
+			}
 		}
 	}
 }

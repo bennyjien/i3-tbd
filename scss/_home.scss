@@ -14,7 +14,7 @@
 			}
 
 			&.section-highlight {
-				background-clip: lighten($color-one-100, 50%);
+				background-color: lighten($color-one-100, 5%);
 				background-image: url("assets/images/bg-stripe.png");
 				padding-bottom: 48px;
 				padding-top: 48px;

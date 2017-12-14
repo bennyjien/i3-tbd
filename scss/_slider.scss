@@ -1,6 +1,6 @@
 @at-root {
   .slider-hero {
-    background-color: lighten($color-one-100, 2%);
+    background-color: lighten($color-one-100, 5%);
     background-image: url("assets/images/bg-stripe.png");
     position: relative;
     top: -1px;
@@ -55,6 +55,7 @@
       }
 
       @include breakpoint(walker) {
+        background-color: transparent;
         border: 2px solid $color-one-300;
         flex: 0 0 auto;
         margin: 32px 0;

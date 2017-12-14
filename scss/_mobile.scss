@@ -1,4 +1,31 @@
 @at-root {
+	.mobile-nav-is-toggled {
+
+		.site-container {
+
+			&:before {
+				opacity: 0.5;
+				visibility: visible;
+				z-index: 10;
+
+				@include breakpoint(runner) {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	.mobile-nav-is-untoggling {
+
+		.site-container {
+
+			&:before {
+				opacity: 0;
+				z-index: 10;
+			}
+		}
+	}
+
 	.mobile-nav {
 		background-color: $white;
 		display: none;
@@ -79,33 +106,6 @@
 		}
 	}
 
-	.mobile-nav-is-toggled {
-
-		.site-container {
-
-			&:before {
-				opacity: 0.5;
-				visibility: visible;
-				z-index: 10;
-
-				@include breakpoint(runner) {
-					display: none !important;
-				}
-			}
-		}
-	}
-
-	.mobile-nav-is-untoggling {
-
-		.site-container {
-
-			&:before {
-				opacity: 0;
-				z-index: 10;
-			}
-		}
-	}
-
 	.mobile-nav-toggle {
 		color: $color-one-400;
 		display: block;
@@ -115,6 +115,14 @@
 		position: absolute;
 		top: 50%;
 		width: 24px;
+
+		@include breakpoint(creeper) {
+			left: 24px;
+		}
+
+		@include breakpoint(crawler) {
+			left: 32px;
+		}
 
 		@include breakpoint(runner) {
 			display: none;
