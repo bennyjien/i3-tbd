@@ -15,6 +15,10 @@
 			color: $color-text-light;
 		}
 	}
+
+	.article-archive-footer {
+		margin-top: 32px;
+	}
 }
 
 @at-root {
@@ -69,6 +73,10 @@
 				padding: 12px;
 			}
 		}
+	}
+
+	.article-overviews-loader {
+		text-align: center;
 	}
 
 	.article-overview {
@@ -129,16 +137,6 @@
 				@include font-size-h4;
 			}
 		}
-
-		.love {
-			@include font-size-400;
-			color: $color-text-light;
-			text-transform: uppercase;
-
-			.icon {
-				fill: $color-400;
-			}
-		}
 	}
 }
 
@@ -168,12 +166,6 @@
 		.title {
 			@include font-size-h5;
 			margin-bottom: 4px;
-		}
-
-		.love {
-			@include font-size-400;
-			color: $color-text-light;
-			text-transform: uppercase;
 		}
 	}
 }

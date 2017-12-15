@@ -37,12 +37,14 @@
 	&.button-large {
 		@include font-size-600;
 		font-weight: 700;
-		padding: 6px 16px;
+		max-width: 100%;
+		min-width: 320px;
+		padding: 7px 24px;
 	}
 
 	&.button-line {
 		background-color: transparent;
-		border-color: $color-one-500;
+		border-color: $color-one-400;
 		color: $color-one-500;
 
 		&:hover,
@@ -91,6 +93,16 @@
 		&:active {
 			background-color: $color-400;
 		}
+	}
+}
+
+.love {
+	@include font-size-400;
+	color: $color-text-light;
+	text-transform: uppercase;
+
+	.icon {
+		fill: $color-text-lighter;
 	}
 }
 
