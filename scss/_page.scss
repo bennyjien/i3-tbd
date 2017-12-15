@@ -8,6 +8,12 @@
 		.title {
 			font-weight: 400;
 			text-transform: uppercase;
+			font-family: $display;
+			margin-bottom: 8px;
+		}
+
+		.subtitle {
+			color: $color-500;
 		}
 	}
 }
