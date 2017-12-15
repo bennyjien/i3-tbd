@@ -1,10 +1,63 @@
 @at-root {
+	.article-archive-container {}
+
+	.article-archive-header {
+		margin-bottom: 24px;
+
+		.title {
+			font-weight: 400;
+			font-family: $display;
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+
+		.subtitle {
+			color: $color-text-light;
+		}
+	}
+}
+
+@at-root {
+	.article-arranger {
+		border-bottom: 1px solid $color-border;
+		display: flex;
+		margin-bottom: 24px;
+		padding-bottom: 16px;
+	}
+
+	.article-arranger-filter {
+		align-items: center;
+		display: flex;
+		flex: 1 1 0;
+
+		.label {
+			margin-bottom: 0;
+			margin-right: 16px;
+		}
+	}
+
+	.article-arranger-sort {
+		flex: 0 0 auto;
+	}
+}
+
+@at-root {
 	.article-overviews {
 		@include clearfix;
 		margin: -8px;
 
 		@include breakpoint(crawler) {
 			margin: -12px;
+		}
+
+		&.article-overviews-large {
+
+			.article-overview {
+
+				@include breakpoint(crawler) {
+					width: 33.333333333%;
+				}
+			}
 		}
 
 		.article-overview {
@@ -14,7 +67,6 @@
 
 			@include breakpoint(crawler) {
 				padding: 12px;
-				width: 33.333333333%;
 			}
 		}
 	}
@@ -86,6 +138,42 @@
 			.icon {
 				fill: $color-400;
 			}
+		}
+	}
+}
+
+@at-root {
+	.article-widget {}
+
+	.article-widget-items {
+
+		.article-widget-item {
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	.article-widget-item {
+		display: flex;
+
+		.thumbnail {
+			flex: 0 0 auto;
+			height: 48px;
+			margin-right: 16px;
+			padding: 48px;
+		}
+
+		.title {
+			@include font-size-h5;
+			margin-bottom: 4px;
+		}
+
+		.love {
+			@include font-size-400;
+			color: $color-text-light;
+			text-transform: uppercase;
 		}
 	}
 }

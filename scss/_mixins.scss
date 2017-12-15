@@ -209,8 +209,8 @@
 
 	@include breakpoint(runner) {
 		flex: 0 0 auto;
-		margin-left: 32px;
-		width: 256px;
+		margin-left: 48px;
+		width: 320px;
 	}
 
 	@include breakpoint(jumper) {

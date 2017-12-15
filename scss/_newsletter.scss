@@ -1,0 +1,83 @@
+@at-root {
+	.newsletter-widget {
+		border: 1px solid $color-border;
+		border-radius: 6px;
+		box-shadow: $box-shadow-500;
+		overflow: hidden;
+		padding: 24px;
+		text-align: center;
+	}
+
+	.newsletter-widget-head {
+		margin-bottom: 32px;
+		position: relative;
+
+		&:after {
+			content: url(assets/images/symbols/icon-brand-ribbon.svg);
+			bottom: -26px;
+			height: 24px;
+			left: 50%;
+			margin-left: -12px;
+			opacity: 0.24;
+			position: absolute;
+			width: 24px;
+		}
+
+		.title {
+			display: inline-block;
+			font-family: $display;
+			font-size: 30px;
+			font-weight: 400;
+			margin-bottom: 4px;
+			position: relative;
+			text-transform: uppercase;
+			z-index: 1;
+
+			&:before,
+			&:after {
+				content: "";
+				background-color: $color-one-100;
+				height: 4px;
+				margin-top: -1px;
+				position: absolute;
+				top: 50%;
+				width: 100%;
+				z-index: -1;
+			}
+
+			&:before {
+				margin-right: 8px;
+				right: 100%;
+			}
+
+			&:after {
+				margin-left: 8px;
+				left: 100%;
+			}
+		}
+
+		.subtitle {
+			@include font-size-400;
+			color: $color-text-light;
+		}
+	}
+
+	.newsletter-widget-form {
+
+		.input,
+		.button {
+			padding: 7px;
+			text-align: center;
+			width: 100%;
+		}
+
+		.input {
+			background-color: $color-100;
+			margin-bottom: 8px;
+		}
+
+		.button {
+			font-weight: 700;
+		}
+	}
+}

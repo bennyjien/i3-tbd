@@ -1,10 +1,21 @@
 @at-root {
-	.widget-container {
+	.widget-single {
 
 		&:not(:last-child) {
-			margin-bottom: 24px;
+			margin-bottom: 32px;
 		}
 	}
 
-	.widget-header {}
+	.widget-single-head {
+		border-bottom: 1px solid $color-border;
+		margin-bottom: 16px;
+		padding-bottom: 8px;
+
+		.title {
+			color: $color-text-light;
+			font-family: $display;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+	}
 }
