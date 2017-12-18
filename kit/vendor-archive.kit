@@ -1,12 +1,84 @@
 <!-- @import variables -->
-<!-- $home-nav: item item-selected -->
+<!-- $vendor-nav: item item-current -->
 <!-- @import header -->
 
 			<div id="site-content" class="site-content">
 				<div class="inner wrapper">
 					<div class="main-content" role="main">
 
-						<div class="page-container"></div>
+						<div class="vendor-archive-container">
+							<header class="vendor-archive-header">
+								<h1 class="title">The Golden Book</h1>
+								<p class="subtitle">Temukan vendor terbaik yang akan membantu kamu dalam mempersiapkan hari terbahagiamu!</p>
+							</header>
+
+							<div class="vendor-archive-content">
+								<div class="vendor-arranger">
+									<div class="vendor-arranger-search">
+										<input type="text" class="input" placeholder="Search Vendor">
+									</div>
+									<div class="vendor-arranger-filter">
+										<p class="label">Filter</p>
+										<div class="selects">
+											<select class="select">
+												<option>All Category</option>
+											</select>
+											<select class="select">
+												<option>All Location</option>
+											</select>
+											<select class="select">
+												<option>All Budget</option>
+											</select>
+										</div>
+									</div>
+									<div class="vendor-arranger-sort">
+										<label for="select-sort-vendor" class="label">Show by</label>
+										<select name="select-sort-vendor" id="select-sort-vendor" class="select select-compact">
+											<option>Recommendation</option>
+											<option>Most Loved</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="vendor-overviews">
+									<div class="vendor-overview">
+										<a href="vendor-single.html" class="link">
+											<div class="vendor-overview-badge">
+												<p class="badge badge-gold">Premium Vendor</p>
+											</div>
+											<div class="vendor-overview-thumbnail">
+												<img src="http://placehold.it/480x480/eeeeee/111111">
+											</div>
+											<div class="vendor-overview-detail">
+												<p class="meta"><span class="category">Wedding Organizer</span> - <span class="location">Jakarta</span></p>
+												<h2 class="name">Aku Wedding</h2>
+											</div>
+										</a>
+									</div>
+
+									<div class="vendor-overview">
+										<a href="vendor-single.html" class="link">
+											<div class="vendor-overview-badge">
+												<p class="badge">TGB Pick</p>
+											</div>
+											<div class="vendor-overview-thumbnail">
+												<img src="http://placehold.it/480x480/eeeeee/111111">
+											</div>
+											<div class="vendor-overview-detail">
+												<p class="meta"><span class="category">Photography</span> - <span class="location">Surabaya</span></p>
+												<h2 class="name">Akahare</h2>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<footer class="vendor-archive-footer">
+								<div class="vendor-overviews-loader">
+									<a href="#" class="button button-line button-large">Load More Vendors</a>
+								</div>
+							</footer>
+						</div>
 
 					</div>
 				</div>

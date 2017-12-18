@@ -191,25 +191,6 @@
 		z-index: 3;
 	}
 
-	&:after {
-		content: "";
-		animation: walker-spin 1.5s infinite linear;
-		border-left: 3px solid rgba($color-800, 0.2);
-		border-bottom: 3px solid rgba($color-800, 0.2);
-		border-right: 3px solid rgba($color-800, 0.2);
-		border-top: 3px solid $color-one-500;
-		border-radius: 100%;
-		display: block;
-		height: 16px;
-		left: 50%;
-		margin: -8px 0 0 -8px;
-		outline: 1px solid transparent;
-		position: absolute;
-		top: 50%;
-		width: 16px;
-		z-index: 1;
-	}
-
 	img {
 		left: 0;
 		position: absolute;

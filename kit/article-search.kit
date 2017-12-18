@@ -1,14 +1,91 @@
 <!-- @import variables -->
-<!-- $home-nav: item item-selected -->
+<!-- $article-search-nav: item item-current -->
 <!-- @import header -->
 
 			<div id="site-content" class="site-content">
 				<div class="inner wrapper">
 					<div class="main-content" role="main">
 
-						<div class="page-container"></div>
+						<div class="article-search-container">
+							<header class="article-search-header">
+								<h1 class="title">Search Results for <span class="keyword">Red Wedding</span></h1>
+								<p class="subtitle">5 articles found</p>
+							</header>
+
+							<div class="article-search-content">
+								<div class="article-arranger">
+									<div class="article-arranger-sort">
+										<label for="select-sort-article" class="label">Show by</label>
+										<select name="select-sort-article" id="select-sort-article" class="select select-compact">
+											<option>Newest Post</option>
+											<option>Most Loved</option>
+										</select>
+									</div>
+								</div>
+
+								<div id="article-overviews" class="article-overviews">
+									<div class="article-overview">
+										<a href="article-single.html" class="link">
+											<div class="article-overview-thumbnail">
+												<img src="http://placehold.it/480x320/eeeeee/111111">
+											</div>
+											<div class="article-overview-detail">
+												<p class="categories">
+													<span class="category">The Wedding</span>
+												</p>
+												<h2 class="title">50 Lagu Romantis untuk Pernikahanmu</h2>
+												<p class="love">
+													<svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-heart" />
+													</svg> 54 Loves</p>
+											</div>
+										</a>
+									</div>
+									<div class="article-overview">
+										<a href="#" class="link">
+											<div class="article-overview-thumbnail">
+												<img src="http://placehold.it/480x320/eeeeee/111111">
+											</div>
+											<div class="article-overview-detail">
+												<p class="categories">
+													<span class="category">The Wedding</span>
+												</p>
+												<h2 class="title">50 Lagu Romantis untuk Pernikahanmu</h2>
+												<p class="love">
+													<svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-heart" />
+													</svg> 54 Loves</p>
+											</div>
+										</a>
+									</div>
+									<div class="article-overview">
+										<a href="#" class="link">
+											<div class="article-overview-thumbnail">
+												<img src="http://placehold.it/480x320/eeeeee/111111">
+											</div>
+											<div class="article-overview-detail">
+												<p class="categories">
+													<span class="category">The Wedding</span>
+												</p>
+												<h2 class="title">50 Lagu Romantis untuk Pernikahanmu</h2>
+												<p class="love">
+													<svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-heart" />
+													</svg> 54 Loves</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<footer class="article-search-footer">
+								<div class="article-overviews-loader">
+									<a href="#article-overviews" class="button button-line button-large">Load More Articles</a>
+								</div>
+							</footer>
+						</div>
 
 					</div>
+
+					<!-- @import sidebar-article-archive -->
+
 				</div>
 			</div>
 

@@ -243,6 +243,13 @@
 					margin-right: 24px;
 				}
 			}
+
+			&.item-current {
+
+				.link {
+					color: $color-one-600;
+				}
+			}
 		}
 
 		.link {
