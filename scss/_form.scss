@@ -635,3 +635,47 @@
 		}
 	}
 }
+
+@at-root {
+	.form-image {
+		@include clearfix;
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.form-image-preview {
+		background-color: $white;
+		border: 1px solid $color-border;
+		float: left;
+		margin-right: 16px;
+		width: 120px;
+	}
+
+	.form-image-file {
+		overflow: hidden;
+	}
+}
+
+@at-root {
+	.form-gallery {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+
+		.label {
+			display: inline-block;
+			font-weight: 700;
+			margin-bottom: 4px;
+		}
+
+		.counter {
+
+			.count {
+				font-weight: 700;
+			}
+		}
+	}
+}

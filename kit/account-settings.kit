@@ -7,12 +7,142 @@
 		<div class="inner wrapper">
 			<div class="main-content" role="main">
 
-				<div class="account-settings-container">
-					<header class="account-settings-header">
+				<div class="account-page-container">
+					<header class="account-page-header">
 						<h1 class="heading">Settings</h1>
 					</header>
 
-					<div class="account-settings-content">
+					<div class="account-page-content">
+						<div class="account-section">
+							<div class="account-section-head">
+								<h2 class="title">Account Information</h2>
+								<p class="subtitle">Informasi Akun Anda</p>
+							</div>
+							<div class="account-section-body">
+								<div class="form-text">
+									<label for="name" class="label">Username <span class="required">*</span></label>
+									<input type="text" id="name" class="input">
+								</div>
+								<div class="form-text">
+									<label for="name" class="label">Membership <span class="required">*</span></label>
+									<input type="text" id="name" class="input" value="Premium Vendor (expire 11/11/2019)" readonly>
+								</div>
+								<div class="account-form account-form-box">
+									<div class="form-text">
+										<label for="password-current" class="label">Current Password</label>
+										<input type="password" id="password-current" class="input" placeholder="If you would like to change the password">
+									</div>
+									<div class="form-group">
+										<div class="form-text">
+											<label for="password-new" class="label">New Password</label>
+											<input type="password" id="password-new" class="input">
+										</div>
+										<div class="form-text">
+											<label for="password-new-2" class="label">Confirm New Password</label>
+											<input type="password" id="password-new-2" class="input">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="account-section">
+							<div class="account-section-head">
+								<h2 class="title">Personal Information</h2>
+								<p class="subtitle">Tulis data pribadimu di sini!</p>
+							</div>
+							<div class="account-section-body">
+								<div class="form-text">
+									<label for="name" class="label">Nama <span class="required">*</span></label>
+									<input type="text" id="name" class="input">
+								</div>
+								<div class="form-group">
+									<div class="form-text">
+										<label for="email" class="label">Email <span class="required">*</span></label>
+										<input type="text" id="email" class="input">
+									</div>
+									<div class="form-phone">
+										<label for="checkout-phone" class="label">No. HP <span class="required">*</span></label>
+										<div class="inputs">
+											<input type="text" class="input input-code" value="+62" readonly>
+											<input type="text" id="checkout-phone" class="input input-phone">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="account-section">
+							<div class="account-section-head">
+								<h2 class="title">Business Information</h2>
+								<p class="subtitle">Tulis data bisnismu di sini!</p>
+							</div>
+							<div class="account-section-body">
+								<div class="form-text">
+									<label for="business-name" class="label">Nama Bisnis <span class="required">*</span></label>
+									<input type="text" name="business_name" id="business-name" class="input">
+								</div>
+								<div class="form-text">
+									<label for="vendor-category" class="label">Kategori Vendor <span class="required">*</span></label>
+									<select name="vendor_category" id="vendor-category" class="input">
+										<option value="">Beauty Preparation</option>
+									</select>
+								</div>
+								<div class="form-text">
+									<label for="office-address" class="label">Alamat Kantor <span class="required">*</span></label>
+									<input type="text" name="office_address" id="office-address" class="input">
+								</div>
+								<div class="form-text">
+									<label for="office-phone" class="label">No. Telp. Kantor <span class="required">*</span></label>
+									<input type="text" name="office_phone" id="office-phone" class="input">
+								</div>
+								<div class="form-text">
+									<label for="office-email" class="label">Email Kantor <span class="required">*</span></label>
+									<input type="text" name="office_email" id="office-email" class="input">
+								</div>
+							</div>
+						</div>
+
+						<div class="account-section">
+							<div class="account-section-head">
+								<h2 class="title">Social Media Information</h2>
+								<p class="subtitle">Masukkan link dari social media profile bisnismu di sini!</p>
+							</div>
+							<div class="account-section-body">
+								<div class="form-text">
+									<label for="website" class="label">Website</label>
+									<input type="text" name="website" id="website" class="input">
+								</div>
+								<div class="form-text">
+									<label for="whatsapp" class="label">Whatsapp</label>
+									<input type="text" name="whatsapp" id="whatsapp" class="input">
+								</div>
+								<div class="form-text">
+									<label for="bbm" class="label">BBM</label>
+									<input type="text" name="bbm" id="bbm" class="input">
+								</div>
+								<div class="form-text">
+									<label for="line" class="label">LINE</label>
+									<input type="text" name="line" id="line" class="input">
+								</div>
+								<div class="form-text">
+									<label for="instagram" class="label">Instagram</label>
+									<input type="text" name="instagram" id="instagram" class="input">
+								</div>
+								<div class="form-text">
+									<label for="facebook" class="label">Facebook</label>
+									<input type="text" name="facebook" id="facebook" class="input">
+								</div>
+								<div class="form-text">
+									<label for="twitter" class="label">Twitter</label>
+									<input type="text" name="twitter" id="twitter" class="input">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-submit">
+							<button class="button button-large">Save Settings</button>
+						</div>
 					</div>
 				</div>
 

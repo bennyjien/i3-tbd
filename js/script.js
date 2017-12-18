@@ -83,6 +83,15 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	// initialize Fine Uploader
+	var $uploader = document.getElementById('uploader');
+
+	if ($uploader) {
+		var uploader = new qq.FineUploader({
+			element: $uploader
+		});
+	}
+
 	// initialize magnificPopup
 	$('.js-popup-link').magnificPopup({
 		type: 'inline',
