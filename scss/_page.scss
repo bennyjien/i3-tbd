@@ -1,10 +1,11 @@
-
 @at-root {
+	.page-single-container {}
+
 	.page-single-header {
 		display: block;
 		text-align: center;
 		margin-bottom: 32px;
-	
+
 		.title {
 			font-weight: 400;
 			text-transform: uppercase;
@@ -16,16 +17,10 @@
 			color: $color-500;
 		}
 	}
-}
 
-@at-root {
 	.page-single-content {
 		padding-bottom: 32px;
 	}
-}
 
-@at-root {
-	.page-single-footer {
-		
-	}
+	.page-single-footer {}
 }

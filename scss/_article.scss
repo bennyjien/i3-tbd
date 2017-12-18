@@ -24,13 +24,48 @@
 @at-root {
 	.article-single-container {}
 
+	.article-single-header {
+		margin-bottom: 24px;
+
+		.title {
+			margin-bottom: 8px;
+		}
+
+		.meta {
+			color: $color-text-light;
+
+			a {
+				color: $color-text-light;
+				font-weight: 700;
+			}
+		}
+	}
+
 	.article-single-content {
+		align-items: flex-start;
 		display: flex;
 	}
 }
 
 @at-root {
+	.article-submit-container {}
+
+	.article-submit-header {
+		display: block;
+		margin-bottom: 32px;
+
+		.title {
+			font-weight: 400;
+			text-transform: uppercase;
+			font-family: $display;
+			margin-bottom: 8px;
+		}
+	}
+}
+
+@at-root {
 	.article-arranger {
+		align-items: center;
 		border-bottom: 1px solid $color-border;
 		display: flex;
 		margin-bottom: 24px;
@@ -43,13 +78,36 @@
 		flex: 1 1 0;
 
 		.label {
+			color: $color-text-light;
+			flex: 0 0 auto;
+			font-style: italic;
 			margin-bottom: 0;
 			margin-right: 16px;
+		}
+
+		.selects {
+			display: flex;
+			flex: 1 1 0;
+		}
+
+		.select {
+			flex: 1 1 0;
+			height: auto;
+			padding: 8px;
+
+			&:not(:last-child) {
+				margin-right: 8px;
+			}
 		}
 	}
 
 	.article-arranger-sort {
 		flex: 0 0 auto;
+		margin-left: 48px;
+
+		.label {
+			color: $color-text-light;
+		}
 	}
 }
 
@@ -236,7 +294,58 @@
 }
 
 @at-root {
-	.page-single-header.submit-story-header {
-		text-align: left;
+	.article-guide {
+		align-items: center;
+		border-bottom: 1px solid $color-border;
+		border-top: 1px solid $color-border;
+		display: flex;
+		padding: 8px 0;
+	}
+
+	.article-guide-label {
+		color: $color-text-light;
+		margin-bottom: 0;
+		margin-right: 32px;
+		flex: 0 0 auto;
+		font-style: italic;
+	}
+
+	.article-guide-items {
+		align-items: center;
+		display: flex;
+		flex: 1 1 0;
+	}
+
+	.article-guide-item {
+		flex: 1 1 0;
+
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+
+		.label {
+			color: $color-text-light;
+			font-family: $display;
+			margin-bottom: 0;
+			text-transform: uppercase;
+		}
+
+		.value {
+			font-weight: 700;
+		}
+	}
+}
+
+@at-root {
+	.article-post {
+		@include font-size-600;
+	}
+}
+
+@at-root {
+	.article-share {
+		margin-left: 32px;
+		position: sticky;
+		top: 24px;
 	}
 }

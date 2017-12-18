@@ -3,13 +3,13 @@
     display: block;
     margin-bottom: 32px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     .question {
       font-weight: 700;
       margin-bottom: 8px;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 }

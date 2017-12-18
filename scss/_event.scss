@@ -8,7 +8,7 @@
       padding: 0 18px;
       width: 14.29%;
       flex: 1 1 auto;
-      
+
       .event-date {
         display: inline-block;
         padding: 3px 6px 3px 20px;
@@ -16,7 +16,7 @@
         background-color: $color-two-100;
         margin-left: -18px;
         margin-bottom: 32px;
-  
+
         p {
           margin-bottom: 0;
           font-family: $display;
@@ -60,7 +60,9 @@
       }
     }
   }
+}
 
+@at-root {
   .event-pagination {
     display: table;
     width: 100%;

@@ -2,31 +2,31 @@
   .missin-page-container {
     display: block;
     text-align: center;
+  }
 
-    .missing-page-header {
-      margin-bottom: 24px;
-      color: $color-600;
+  .missing-page-header {
+    color: $color-600;
+    margin-bottom: 24px;
 
-      .title {
-        font-family: $display;
-        margin-bottom: 0;
-        text-transform: uppercase;
-        font-weight: 400;
-        @include font-size-jumbo;
-        line-height: 1;
-      }
-  
-      .subtitle {
-        font-family: $display;
-        @include font-size-800;
-      }
+    .title {
+      @include font-size-jumbo;
+      font-family: $display;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 0;
+      text-transform: uppercase;
     }
 
-    .missing-page-content {
-      p {
-        @include font-size-400;
-        color: $color-500;
-      }
+    .subtitle {
+      @include font-size-800;
+      font-family: $display;
+    }
+  }
+
+  .missing-page-content {
+    p {
+      @include font-size-400;
+      color: $color-500;
     }
   }
 }

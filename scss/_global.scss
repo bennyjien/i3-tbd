@@ -96,6 +96,17 @@
 	}
 }
 
+.select {
+
+	&.select-compact {
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjMiIHZpZXdCb3g9IjAgMCA2IDMiPjxwb2x5Z29uIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNS45OTIgMCAyLjk5MiAzIC0uMDA4IDAiLz48L3N2Zz4=);
+		border: 0;
+		border-bottom: 1px solid $color-border;
+		box-shadow: none;
+		padding: 0 12px 2px 0;
+	}
+}
+
 .love {
 	@include font-size-400;
 	color: $color-text-light;

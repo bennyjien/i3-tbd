@@ -1,19 +1,21 @@
 @at-root {
 	.about-coverage {
 		margin-bottom: 24px;
-	
+
 		.label {
+			@include font-size-400;
+			color: $color-text-light;
 			display: block;
 			margin-bottom: 12px;
-			color: $color-text-light;
-			@include font-size-400;
 		}
-		.about-coverage-media {
-			.image {
-				height: 45px;
-				margin-top: 2px;
-				margin-bottom: 2px;
-			}
+	}
+
+	.about-coverage-media {
+
+		.image {
+			height: 45px;
+			margin-bottom: 2px;
+			margin-top: 2px;
 		}
 	}
 }

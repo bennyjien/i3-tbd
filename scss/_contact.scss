@@ -1,96 +1,100 @@
 @at-root {
-    .contact-site-content {
-        background-size: cover !important;
-        background-position: center !important;
+	.contact-page-container {
+		display: block;
+		position: relative;
+		z-index: 1;
 
-        .wrapper {
-            padding-left: 16px;
-            padding-right: 16px;
-        }
+		@include breakpoint(walker) {
+			display: flex;
+		}
+	}
 
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0,0,0,0.3);
-        }
+	.contact-site-content {
+		background-size: cover !important;
+		background-position: center !important;
 
-        @include breakpoint(crawler) {
-            .wrapper {
-                padding-left: 32px;
-                padding-right: 32px;
-            }
-        }
-    }
+		.wrapper {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
 
-    .contact-page-container {
-        display: block;
-        position: relative;
-        z-index: 1;
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0,0,0,0.3);
+		}
 
-        @include breakpoint(walker) {
-            display: flex;
-        }
+		@include breakpoint(crawler) {
+			.wrapper {
+				padding-left: 32px;
+				padding-right: 32px;
+			}
+		}
+	}
+}
 
-        .contact-info {
-            display: block;
-            padding-right: 32px;
-            width: 100%;
-            color: $color-100;
-            margin-bottom: 48px;
+@at-root {
+	.contact-info {
+		display: block;
+		padding-right: 32px;
+		width: 100%;
+		color: $color-100;
+		margin-bottom: 48px;
 
-            @include breakpoint(walker) {
-                width: 50%;
-            }
+		@include breakpoint(walker) {
+			width: 50%;
+		}
 
-            .contact-info-header {
-                margin-bottom: 12px;
-    
-                .title {
-                    font-weight: 400;
-                    font-family: $display;
-                    text-transform: uppercase;
-                }
-            }
-            .contact-info-content {
-                max-width: 400px;
-            }
-        }
+		.contact-info-header {
+			margin-bottom: 12px;
 
-        .contact-form {
-            display: table;
-            width: 100%;
+			.title {
+				font-weight: 400;
+				font-family: $display;
+				text-transform: uppercase;
+			}
+		}
+		.contact-info-content {
+			max-width: 400px;
+		}
+	}
+}
 
-            @include breakpoint(walker) {
-                width: 50%;
-            }
+@at-root {
+	.contact-form {
+		display: table;
+		width: 100%;
 
-            .contact-form-box {
-                display: block;
-                float: right;
-                width: 100%;
-                padding: 24px 24px 28px;
-                border-radius: 6px;
-                background-color: #ffffff;
+		@include breakpoint(walker) {
+			width: 50%;
+		}
 
-                @include breakpoint(walker) {
-                    max-width: 500px;
-                    padding: 24px 36px 28px;
-                }
-                
-                .label {
-                    margin-bottom: 6px;
-                }
+		.contact-form-box {
+			display: block;
+			float: right;
+			width: 100%;
+			padding: 24px 24px 28px;
+			border-radius: 6px;
+			background-color: #ffffff;
 
-                textarea {
-                    min-height: 150px;
-                    resize: none;
-                }
-            }
-        }
-    }
+			@include breakpoint(walker) {
+				max-width: 500px;
+				padding: 24px 36px 28px;
+			}
+
+			.label {
+				margin-bottom: 6px;
+			}
+
+			textarea {
+				min-height: 150px;
+				resize: none;
+			}
+		}
+	}
 }
