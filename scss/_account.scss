@@ -1,0 +1,8 @@
+@at-root {
+	.account-section {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+}

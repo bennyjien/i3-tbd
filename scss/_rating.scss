@@ -59,3 +59,90 @@
 		}
 	}
 }
+
+@at-root {
+	.rating-histogram {
+		@include clearfix;
+		margin-bottom: 24px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.summary {
+
+			.average {
+				font-size: $font-size-h6;
+				line-height: 1;
+				margin-bottom: 8px;
+				vertical-align: top;
+			}
+		}
+
+		.histogram {
+			border: none;
+			margin-top: 16px;
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+
+			> thead,
+			> tbody,
+			> tfoot {
+
+				> tr {
+
+					> th,
+					> td {
+						border: none;
+					}
+				}
+			}
+
+			th,
+			td {
+				padding: 0 0 8px;
+			}
+
+			.rank {
+				color: $color-800;
+				font-weight: 300;
+				font-size: 13px;
+				height: 16px;
+				line-height: 16px;
+				padding-right: 8px;
+				white-space: nowrap;
+
+				.label {
+					display: inline-block;
+					height: 16px;
+					line-height: 16px;
+				}
+			}
+
+			.rating-bar {
+				width: 100%;
+
+				.rating {
+					background-color: $color-200;
+					height: 16px;
+				}
+
+				.bar {
+					background-color: $color-text;
+					height: 100%;
+				}
+			}
+
+			.count {
+				color: $color-800;
+				font-size: $font-size-300;
+				font-weight: 600;
+				line-height: 1;
+				padding-left: 8px;
+				text-align: right;
+			}
+		}
+	}
+}

@@ -1,14 +1,246 @@
 <!-- @import variables -->
 <!-- $account-nav: item item-current -->
+<!-- $account-dashboard-nav: item item-current -->
 <!-- @import header -->
 
 			<div id="site-content" class="site-content">
 				<div class="inner wrapper">
 					<div class="main-content" role="main">
 
-						<div class="page-container"></div>
+						<div class="account-dashboard-container">
+							<header class="account-dashboard-header">
+								<h1 class="heading">Dashboard</h1>
+							</header>
+
+							<div class="account-dashboard-content">
+								<section class="account-section">
+									<div class="account-section-head">
+										<h2 class="title">Vendor Reviews <!-- <a class="link" href="profile-dashboard-vendorreviews.html">details</a> --> <a class="link link-alert" href="#">2 pending reviews</a></h2> <!-- kalau ada pending review, munculkan .link-alert -->
+										<p class="subtitle">How your vendor page is reviewed by visitors</p>
+									</div>
+									<div class="account-section-body">
+										<div class="rating-histogram">
+											<div class="summary">
+												<h4 class="average">Average Rating (234 reviews)</h4>
+												<div class="rating rating-star">
+													<div class="star" title="Rated 4.5 out of 5">
+														<span class="fill" style="width: 90%"></span>
+													</div>
+													<span class="count">4.5 out of 5</span>
+												</div>
+											</div>
+											<table class="histogram">
+												<thead>
+													<tr>
+														<th><span class="only-sr">Number of stars</span></th>
+														<th><span class="only-sr">Percentage</span></th>
+														<th><span class="only-sr">Number of reviews</span></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th class="rank">
+															<span class="label">5 Stars</span>
+														</th>
+														<td class="rating-bar">
+															<div class="rating">
+																<div class="bar" style="width: 79%">
+																	<span class="only-sr">79%</span>
+																</div>
+															</div>
+														</td>
+														<td class="count">
+															85
+															<span class="only-sr">reviews</span>
+														</td>
+													</tr>
+													<tr>
+														<th class="rank">
+															<span class="label">4 Stars</span>
+														</th>
+														<td class="rating-bar">
+															<div class="rating">
+																<div class="bar" style="width: 10%">
+																	<span class="only-sr">10%</span>
+																</div>
+															</div>
+														</td>
+														<td class="count">
+															11
+															<span class="only-sr">reviews</span>
+														</td>
+													</tr>
+													<tr>
+														<th class="rank">
+															<span class="label">3 Stars</span>
+														</th>
+														<td class="rating-bar">
+															<div class="rating">
+																<div class="bar" style="width: 5%">
+																	<span class="only-sr">5%</span>
+																</div>
+															</div>
+														</td>
+														<td class="count">
+															5
+															<span class="only-sr">reviews</span>
+														</td>
+													</tr>
+													<tr>
+														<th class="rank">
+															<span class="label">2 Stars</span>
+														</th>
+														<td class="rating-bar">
+															<div class="rating">
+																<div class="bar" style="width: 4%">
+																	<span class="only-sr">4%</span>
+																</div>
+															</div>
+														</td>
+														<td class="count">
+															4
+															<span class="only-sr">reviews</span>
+														</td>
+													</tr>
+													<tr>
+														<th class="rank">
+															<span class="label">1 Star</span>
+														</th>
+														<td class="rating-bar">
+															<div class="rating">
+																<div class="bar" style="width: 3%">
+																	<span class="only-sr">3%</span>
+																</div>
+															</div>
+														</td>
+														<td class="count">
+															3
+															<span class="only-sr">reviews</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="action">
+												<a href="#" class="button">Request A Review</a>
+											</div>
+										</div>
+									</div>
+								</section>
+
+								<section class="account-section">
+									<div class="account-section-head">
+										<h2 class="title">Page Views <a class="link" href="#">details</a></h2>
+										<p class="subtitle">How many times your vendor page is viewed by visitors</p>
+									</div>
+									<div class="account-section-body">
+										<div class="account-pageview">
+											<table class="table">
+												<thead>
+													<tr>
+														<!-- tampilkan 6 bulan terakhir -->
+														<th>Aug 2015</th>
+														<th>Sep 2015</th>
+														<th>Oct 2015</th>
+														<th>Nov 2015</th>
+														<th>Dec 2015</th>
+														<th>Jan 2016</th>
+														<th class="total">Total</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>40</td>
+														<td>50</td>
+														<td>30</td>
+														<td>40</td>
+														<td>82</td>
+														<td>121</td>
+														<td class="total">363</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<section class="account-section">
+									<div class="account-section-head">
+										<h2 class="title">Page Saved <a class="link" href="#">details</a></h2>
+										<p class="subtitle">How many times your vendor page is saved by visitors</p>
+									</div>
+									<div class="account-section-body">
+										<div class="account-pageview">
+											<table class="table">
+												<thead>
+													<tr>
+														<!-- tampilkan 6 bulan terakhir -->
+														<th>Aug 2015</th>
+														<th>Sep 2015</th>
+														<th>Oct 2015</th>
+														<th>Nov 2015</th>
+														<th>Dec 2015</th>
+														<th>Jan 2016</th>
+														<th class="total">Total</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>40</td>
+														<td>50</td>
+														<td>30</td>
+														<td>40</td>
+														<td>82</td>
+														<td>121</td>
+														<td class="total">363</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<section class="account-section">
+									<div class="account-section-head">
+										<h2 class="title">Pricelist Downloaded <a class="link" href="#">details</a></h2>
+										<p class="subtitle">How many times your pricelist is downloaded by visitors</p>
+									</div>
+									<div class="account-section-body">
+										<div class="account-pageview">
+											<table class="table">
+												<thead>
+													<tr>
+														<!-- tampilkan 6 bulan terakhir -->
+														<th>Aug 2015</th>
+														<th>Sep 2015</th>
+														<th>Oct 2015</th>
+														<th>Nov 2015</th>
+														<th>Dec 2015</th>
+														<th>Jan 2016</th>
+														<th class="total">Total</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>40</td>
+														<td>50</td>
+														<td>30</td>
+														<td>40</td>
+														<td>82</td>
+														<td>121</td>
+														<td class="total">363</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
 
 					</div>
+
+					<!-- @import sidebar-account-dashboard -->
+
 				</div>
 			</div>
 

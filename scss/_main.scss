@@ -9,5 +9,9 @@
 @at-root {
 	.main-aside {
 		@include aside;
+
+		&.main-aside-left {
+			@include aside-left;
+		}
 	}
 }
