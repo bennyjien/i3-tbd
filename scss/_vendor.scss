@@ -80,6 +80,13 @@
 	.vendor-overviews {
 		@include clearfix;
 		margin: -24px -12px;
+
+		&.vendor-overviews-full {
+
+			.vendor-overview {
+				width: 25%;
+			}
+		}
 	}
 
 	.vendor-overviews-loader {
@@ -90,7 +97,7 @@
 		float: left;
 		padding: 24px 12px;
 		position: relative;
-		width: 25%;
+		width: 33.33334%;
 
 		.link {
 			display: flex;
@@ -142,6 +149,32 @@
 
 		.name {
 			@include font-size-h5;
+		}
+	}
+
+	.vendor-overview-action {
+		right: 20px;
+		position: absolute;
+		top: 32px;
+
+		.action {
+			background-color: $color-100;
+			border-radius: 18px;
+			display: block;
+			height: 36px;
+			padding: 8px;
+			text-align: center;
+			width: 36px;
+
+			&.is-active {
+				color: $color-alert-dark;
+			}
+		}
+
+		.icon {
+			display: block;
+			height: 100%;
+			width: 100%;
 		}
 	}
 }

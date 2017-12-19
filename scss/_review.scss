@@ -6,6 +6,14 @@
 		}
 	}
 
+	.review-single-title {
+		margin-bottom: 4px;
+
+		a {
+			color: $color-text;
+		}
+	}
+
 	.review-single-meta {
 		align-items: center;
 		display: flex;

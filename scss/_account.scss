@@ -1,8 +1,143 @@
 @at-root {
+	.account-page-container {}
+
+	.account-page-header {
+		border-bottom: 1px solid $color-border;
+		margin-bottom: 24px;
+		padding-bottom: 8px;
+
+		.title {
+			font-family: $display;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@at-root {
+	.account-gateway-container {}
+
+	.account-gateway-header {
+		margin-bottom: 24px;
+
+		.title {
+			@include font-size-900;
+			font-family: $display;
+			font-weight: 400;
+			margin-bottom: 8px;
+			text-transform: uppercase;
+		}
+
+		.item {
+			@include font-size-600;
+		}
+	}
+}
+
+@at-root {
+	.account-login {}
+
+	.account-login-forgot {
+		margin-top: 8px;
+		text-align: center;
+
+		.link {
+			@include font-size-400;
+			color: $color-text;
+		}
+	}
+}
+
+@at-root {
 	.account-section {
 
 		&:not(:last-child) {
+			margin-bottom: 48px;
+		}
+	}
+
+	.account-section-head {
+		margin-bottom: 16px;
+
+		.title {
+			@include font-size-h3;
+			font-family: $display;
+			font-weight: 400;
+			text-transform: uppercase;
+
+			&:not(:last-child) {
+				margin-bottom: 4px;
+			}
+
+			.link {
+				@include font-size-400;
+				font-family: $sans-serif;
+				font-weight: 400;
+				margin-left: 4px;
+				text-transform: none;
+			}
+		}
+
+		.subtitle {
+			@include font-size-400
+			color: $color-text-light;
+		}
+	}
+}
+
+@at-root {
+	.account-summary {
+		display: flex;
+
+		&:not(:last-child) {
 			margin-bottom: 24px;
+		}
+	}
+
+	.account-summary-avatar {
+		flex: 0 0 auto;
+		margin-right: 16px;
+		width: 80px;
+	}
+
+	.account-summary-detail {
+
+		.name {
+			font-weight: 700;
+			margin-bottom: 4px;
+		}
+
+		.rating {
+			margin-bottom: 4px;
+		}
+
+		.link {
+			@include font-size-400;
+			color: $color-text-light;
+		}
+	}
+}
+
+@at-root {
+	.account-nav {
+
+		.item {
+
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+
+			&.item-current {
+
+				.link {
+					font-weight: 700;
+				}
+			}
+		}
+
+		.link {
+			@include font-size-600;
+			color: $color-text;
 		}
 	}
 }

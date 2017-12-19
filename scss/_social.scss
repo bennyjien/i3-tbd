@@ -1,4 +1,27 @@
 @at-root {
+	.social-login {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -4px;
+
+		.button {
+			flex: 1 1 0;
+			margin: 4px;
+			padding-bottom: 7px;
+			padding-top: 7px;
+
+			&.button-facebook {
+				background-color: $color-facebook;
+			}
+
+			&.button-googleplus {
+				background-color: $color-googleplus;
+			}
+		}
+	}
+}
+
+@at-root {
 	.social-share {
 
 		.list {

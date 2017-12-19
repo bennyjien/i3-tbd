@@ -112,6 +112,14 @@
 
 	.comment-item-post {
 		display: flex;
+
+		.title {
+			margin-bottom: 4px;
+
+			a {
+				color: $color-text;
+			}
+		}
 	}
 
 	.comment-item-avatar {

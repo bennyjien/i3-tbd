@@ -62,26 +62,35 @@
 
 @at-root {
 	.rating-histogram {
-		@include clearfix;
+		display: flex;
 		margin-bottom: 24px;
 
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
 
-		.summary {
+	.rating-histogram-summary {
+		flex: 0 0 auto;
+		margin-right: 32px;
 
-			.average {
-				font-size: $font-size-h6;
-				line-height: 1;
-				margin-bottom: 8px;
-				vertical-align: top;
-			}
+		.average {
+			font-size: $font-size-h6;
+			line-height: 1;
+			margin-bottom: 8px;
+			vertical-align: top;
 		}
 
-		.histogram {
-			border: none;
+		.action {
 			margin-top: 16px;
+		}
+	}
+
+	.rating-histogram-graph {
+		flex: 1 1 0;
+
+		.graph {
+			border: none;
 
 			&:not(:last-child) {
 				margin-bottom: 16px;
@@ -100,24 +109,27 @@
 				}
 			}
 
-			th,
+			th {
+				padding: 0;
+			}
+
 			td {
-				padding: 0 0 8px;
+				padding: 0 0 1px;
 			}
 
 			.rank {
-				color: $color-800;
-				font-weight: 300;
-				font-size: 13px;
-				height: 16px;
-				line-height: 16px;
+				color: $color-text-light;
+				font-size: $font-size-400;
+				font-weight: 400;
+				height: 20px;
+				line-height: 20px;
 				padding-right: 8px;
 				white-space: nowrap;
 
 				.label {
 					display: inline-block;
-					height: 16px;
-					line-height: 16px;
+					height: 20px;
+					line-height: 20px;
 				}
 			}
 
@@ -126,20 +138,20 @@
 
 				.rating {
 					background-color: $color-200;
-					height: 16px;
+					height: 20px;
 				}
 
 				.bar {
-					background-color: $color-text;
+					background-color: $color-600;
 					height: 100%;
 				}
 			}
 
 			.count {
-				color: $color-800;
-				font-size: $font-size-300;
+				color: $color-text;
+				font-size: $font-size-400;
 				font-weight: 600;
-				line-height: 1;
+				line-height: 20px;
 				padding-left: 8px;
 				text-align: right;
 			}

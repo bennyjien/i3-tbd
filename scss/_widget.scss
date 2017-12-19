@@ -19,3 +19,32 @@
 		}
 	}
 }
+
+@at-root {
+	.widget-box {
+		background-color: $color-bg-light;
+		border: 1px solid $color-border;
+		padding: 24px;
+	}
+
+	.widget-box-head {
+		margin-bottom: 24px;
+		text-align: center;
+
+		.title {
+			@include font-size-h2;
+			font-family: $display;
+			font-weight: 400;
+			text-transform: uppercase;
+
+			&:not(:last-child) {
+				margin-bottom: 4px;
+			}
+		}
+
+		.subtitle {
+			@include font-size-400;
+			color: $color-text-light;
+		}
+	}
+}

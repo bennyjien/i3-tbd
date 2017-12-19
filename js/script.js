@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 
 	// equalheight
 	$('.js-vendor-overviews').imagesLoaded(function() {
-		equalheight('.js-vendor-overviews .vendor-overview a');
+		equalheight('.js-vendor-overviews .vendor-overview .link');
 	});
 
 	// initialize Flickity

@@ -190,6 +190,7 @@
 	}
 
 	.article-overview {
+		position: relative;
 
 		.link {
 			text-decoration: none;
@@ -246,6 +247,32 @@
 			@include breakpoint(runner) {
 				@include font-size-h4;
 			}
+		}
+	}
+
+	.article-overview-action {
+		right: 20px;
+		position: absolute;
+		top: 20px;
+
+		.action {
+			background-color: $color-100;
+			border-radius: 18px;
+			display: block;
+			height: 36px;
+			padding: 8px;
+			text-align: center;
+			width: 36px;
+
+			&.is-active {
+				color: $color-alert-dark;
+			}
+		}
+
+		.icon {
+			display: block;
+			height: 100%;
+			width: 100%;
 		}
 	}
 }
