@@ -1,100 +1,72 @@
 @at-root {
 	.contact-page-container {
-		display: block;
 		position: relative;
 		z-index: 1;
+	}
+
+	.contact-page-content {
 
 		@include breakpoint(walker) {
 			display: flex;
-		}
-	}
-
-	.contact-site-content {
-		background-size: cover !important;
-		background-position: center !important;
-
-		.wrapper {
-			padding-left: 16px;
-			padding-right: 16px;
-		}
-
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background-color: rgba(0,0,0,0.3);
-		}
-
-		@include breakpoint(crawler) {
-			.wrapper {
-				padding-left: 32px;
-				padding-right: 32px;
-			}
 		}
 	}
 }
 
 @at-root {
 	.contact-info {
+		color: $white;
 		display: block;
+		flex: 1 1 0;
 		padding-right: 32px;
-		width: 100%;
-		color: $color-100;
 		margin-bottom: 48px;
+		width: 100%;
 
 		@include breakpoint(walker) {
 			width: 50%;
 		}
+	}
 
-		.contact-info-header {
-			margin-bottom: 12px;
+	.contact-info-header {
+		margin-bottom: 12px;
 
-			.title {
-				font-weight: 400;
-				font-family: $display;
-				text-transform: uppercase;
-			}
+		.title {
+			font-weight: 400;
+			font-family: $display;
+			text-transform: uppercase;
 		}
-		.contact-info-content {
-			max-width: 400px;
-		}
+	}
+
+	.contact-info-content {
+		max-width: 400px;
 	}
 }
 
 @at-root {
 	.contact-form {
 		display: table;
+		flex: 0 0 auto;
 		width: 100%;
 
 		@include breakpoint(walker) {
 			width: 50%;
 		}
+	}
 
-		.contact-form-box {
-			display: block;
-			float: right;
-			width: 100%;
-			padding: 24px 24px 28px;
-			border-radius: 6px;
-			background-color: #ffffff;
+	.contact-form-box {
+		display: block;
+		float: right;
+		width: 100%;
+		padding: 24px 24px 28px;
+		border-radius: 6px;
+		background-color: #ffffff;
 
-			@include breakpoint(walker) {
-				max-width: 500px;
-				padding: 24px 36px 28px;
-			}
+		@include breakpoint(walker) {
+			max-width: 500px;
+			padding: 24px 36px 28px;
+		}
 
-			.label {
-				margin-bottom: 6px;
-			}
-
-			textarea {
-				min-height: 150px;
-				resize: none;
-			}
+		.label {
+			margin-bottom: 6px;
 		}
 	}
 }

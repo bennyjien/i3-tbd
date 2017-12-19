@@ -109,6 +109,80 @@
 }
 
 @at-root {
+	.slider-gallery {
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+	.slider-gallery-slide {
+		background-color: $color-bg;
+		border: 1px solid $color-border;
+
+		.slide {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100%;
+			position: relative;
+			width: 100%;
+
+			img {
+				flex: 0 1 auto;
+				max-height: 100%;
+			}
+		}
+	}
+
+	.slider-gallery-nav {
+		@include clearfix;
+		margin: 4px -4px;
+
+		@include breakpoint(jumper) {
+			margin: 8px -8px;
+		}
+
+		.bullet {
+			float: left;
+			padding: 4px;
+			width: 12.5%;
+
+			@include breakpoint(jumper) {
+				padding: 8px;
+			}
+
+			&:before {
+				content: "";
+				box-shadow: inset 0 0 0 1px $color-border;
+				bottom: 4px;
+				left: 4px;
+				position: absolute;
+				right: 4px;
+				top: 4px;
+				transition: all 0.1s ease-out;
+
+				@include breakpoint(jumper) {
+					bottom: 8px;
+					left: 8px;
+					right: 8px;
+					top: 8px;
+				}
+			}
+
+			&.is-nav-selected {
+				position: relative;
+
+				&:before {
+					box-shadow: inset 0 0 0 2px $color-border-dark;
+				}
+			}
+		}
+	}
+}
+
+@at-root {
   .slider-instagram {}
 
   .slider-instagram-head {

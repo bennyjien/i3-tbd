@@ -223,6 +223,18 @@
 			display: inline-block;
 			font-weight: 700;
 			margin-bottom: 2px;
+
+			.hint {
+				display: inline-block;
+				font-weight: 400;
+			}
+		}
+
+		.input {
+
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
 		}
 	}
 
@@ -599,6 +611,69 @@
 }
 
 @at-root {
+	.form-search {
+		position: relative;
+
+		&:hover,
+		&:focus {
+
+			.button {
+				opacity: 0.4;
+			}
+		}
+
+		.label {
+			display: none;
+		}
+
+		.input {
+			width: 100%;
+		}
+
+		.button {
+			background: transparent url('assets/images/symbols/icon-search.svg') no-repeat center center;
+			background-size: 16px 16px;
+			border: 0;
+			height: 100%;
+			opacity: 0.2;
+			position: absolute;
+			right: 0;
+			text-indent: -9999px;
+			top: 0;
+			transition: all 0.3s ease-out;
+			width: 30px;
+
+			&:hover,
+			&:focus {
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+@at-root {
+	.form-image {
+		@include clearfix;
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.form-image-preview {
+		background-color: $white;
+		border: 1px solid $color-border;
+		float: left;
+		margin-right: 16px;
+		width: 120px;
+	}
+
+	.form-image-file {
+		overflow: hidden;
+	}
+}
+
+@at-root {
 	.form-submit {
 
 		&.form-submit-right {
@@ -633,28 +708,6 @@
 				flex: 0 1 50%;
 			}
 		}
-	}
-}
-
-@at-root {
-	.form-image {
-		@include clearfix;
-
-		&:not(:last-child) {
-			margin-bottom: 24px;
-		}
-	}
-
-	.form-image-preview {
-		background-color: $white;
-		border: 1px solid $color-border;
-		float: left;
-		margin-right: 16px;
-		width: 120px;
-	}
-
-	.form-image-file {
-		overflow: hidden;
 	}
 }
 

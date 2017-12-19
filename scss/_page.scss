@@ -7,10 +7,14 @@
 		margin-bottom: 32px;
 
 		.title {
+			@include font-size-900;
+			font-family: $display;
 			font-weight: 400;
 			text-transform: uppercase;
-			font-family: $display;
-			margin-bottom: 8px;
+
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
 		}
 
 		.subtitle {

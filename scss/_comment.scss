@@ -12,6 +12,13 @@
 			text-transform: uppercase;
 		}
 	}
+
+	.comment-area-row {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
 }
 
 @at-root {

@@ -1,0 +1,27 @@
+@at-root {
+  .flyer-widget {}
+
+  .flyer-widget-image {
+    margin-bottom: 8px;
+  }
+
+  .flyer-widget-text {
+
+    .label {
+      border: 1px solid $color-border;
+      color: $color-text-light;
+      display: inline-block;
+      font-family: $display;
+      font-weight: 400;
+      margin-right: 4px;
+      padding: 0 4px;
+      text-transform: uppercase;
+    }
+
+    .text {
+      color: $color-text;
+      display: inline-block;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <!-- @import variables -->
-<!-- $vendor-register-nav: item item-current -->
+<!-- $vendor-regbox-nav: item item-current -->
 <!-- @import header -->
 
 			<div id="site-content" class="site-content">
@@ -13,12 +13,12 @@
 							</header>
 
 							<div class="page-single-content">
-								<div class="vendor-register-section">
-									<div class="vendor-register-header">
+								<div class="vendor-regbox">
+									<div class="vendor-regbox-header">
 										<h2 class="title"><span>Personal Information</span></h2>
 										<p class="tagline">Tulis data pribadi mu disini!</p>
 									</div>
-									<div class="vendor-register-form">
+									<div class="vendor-regbox-form">
 											<div class="form-text">
 												<label for="name" class="label">Nama <span class="required">*</span></label>
 												<input type="text" name="name" id="name" class="input">
@@ -33,12 +33,12 @@
 											</div>
 									</div>
 								</div>
-								<div class="vendor-register-section">
-										<div class="vendor-register-header">
+								<div class="vendor-regbox">
+										<div class="vendor-regbox-header">
 											<h2 class="title"><span>Business Information</span></h2>
 											<p class="tagline">Tulis data bisnis mu disini!</p>
 										</div>
-										<div class="vendor-register-form">
+										<div class="vendor-regbox-form">
 												<div class="form-text">
 													<label for="business-name" class="label">Nama Bisnis <span class="required">*</span></label>
 													<input type="text" name="business_name" id="business-name" class="input">
@@ -63,12 +63,12 @@
 												</div>
 										</div>
 								</div>
-								<div class="vendor-register-section">
-										<div class="vendor-register-header">
+								<div class="vendor-regbox">
+										<div class="vendor-regbox-header">
 											<h2 class="title"><span>Social Media Information</span></h2>
 											<p class="tagline">Masukkan link dari social media profile bisnis mu disini!</p>
 										</div>
-										<div class="vendor-register-form">
+										<div class="vendor-regbox-form">
 												<div class="form-text">
 													<label for="website" class="label">Website</label>
 													<input type="text" name="website" id="website" class="input">
@@ -97,22 +97,46 @@
 													<label for="twitter" class="label">Twitter</label>
 													<input type="text" name="twitter" id="twitter" class="input">
 												</div>
-												<div class="form-text">
-													<label for="portfolio" class="label">Unggah foto dari portofolio mu disini: <span class="upload-hint">(max. size 1MB/file)</span></label>
-													<input type="file" name="portfolio1" id="portfolio1" class="input">
-													<input type="file" name="portfolio2" id="portfolio2" class="input">
-													<input type="file" name="portfolio3" id="portfolio3" class="input">
-													<input type="file" name="portfolio4" id="portfolio4" class="input">
-													<input type="file" name="portfolio5" id="portfolio5" class="input">
+												<div class="form-file js-form-file">
+													<p class="label">Unggah foto dari portofolio mu disini: <span class="hint">(max. size 1MB/file)</span></p>
+													<div class="input">
+														<input type="file" id="portfolio-1" class="form-file-input" name="portfolio-1" data-multiple-placeholder="{count} files selected">
+														<label for="portfolio-1" class="form-file-label"><span class="button">Choose file</span> <span class="placeholder">No file selected&hellip;</span></label>
+														<a href="#" class="form-file-remove" title="Remove attachment">&times;</a>
+													</div>
+													<div class="input">
+														<input type="file" id="portfolio-2" class="form-file-input" name="portfolio-2" data-multiple-placeholder="{count} files selected">
+														<label for="portfolio-2" class="form-file-label"><span class="button">Choose file</span> <span class="placeholder">No file selected&hellip;</span></label>
+														<a href="#" class="form-file-remove" title="Remove attachment">&times;</a>
+													</div>
+													<div class="input">
+														<input type="file" id="portfolio-3" class="form-file-input" name="portfolio-3" data-multiple-placeholder="{count} files selected">
+														<label for="portfolio-3" class="form-file-label"><span class="button">Choose file</span> <span class="placeholder">No file selected&hellip;</span></label>
+														<a href="#" class="form-file-remove" title="Remove attachment">&times;</a>
+													</div>
+													<div class="input">
+														<input type="file" id="portfolio-4" class="form-file-input" name="portfolio-4" data-multiple-placeholder="{count} files selected">
+														<label for="portfolio-4" class="form-file-label"><span class="button">Choose file</span> <span class="placeholder">No file selected&hellip;</span></label>
+														<a href="#" class="form-file-remove" title="Remove attachment">&times;</a>
+													</div>
+													<div class="input">
+														<input type="file" id="portfolio-5" class="form-file-input" name="portfolio-5" data-multiple-placeholder="{count} files selected">
+														<label for="portfolio-5" class="form-file-label"><span class="button">Choose file</span> <span class="placeholder">No file selected&hellip;</span></label>
+														<a href="#" class="form-file-remove" title="Remove attachment">&times;</a>
+													</div>
 												</div>
-												<div class="form-text">
-													<label for="price-list" class="label">Pricelist Attachment: <span class="upload-hint">(max. size 1MB)</span></label>
-													<input type="file" name="price_list" id="price-list" class="input">
+												<div class="form-file js-form-file">
+													<p class="label">Pricelist Attachment: <span class="hint">(max. size 1MB)</span></p>
+													<div class="input">
+														<input type="file" id="price-list" class="form-file-input" name="price-list" data-multiple-placeholder="{count} files selected">
+														<label for="price-list" class="form-file-label"><span class="button">Choose file</span> <span class="placeholder">No file selected&hellip;</span></label>
+														<a href="#" class="form-file-remove" title="Remove attachment">&times;</a>
+													</div>
 												</div>
 										</div>
 								</div>
-								<div class="vendor-register-action">
-									<input class="button" type="submit" value="Submit">
+								<div class="vendor-regbox-action">
+									<button class="button button-large">Submit</button>
 								</div>
 							</div>
 						</div>

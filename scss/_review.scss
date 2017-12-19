@@ -1,0 +1,29 @@
+@at-root {
+	.review-single {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.review-single-meta {
+		align-items: center;
+		display: flex;
+		margin-bottom: 8px;
+
+		.rating {
+			margin-right: 8px;
+		}
+
+		.author {
+			font-weight: 700;
+			margin-bottom: 0;
+			margin-right: 8px;
+		}
+
+		.date {
+			@include font-size-400;
+			color: $color-text-light;
+		}
+	}
+}

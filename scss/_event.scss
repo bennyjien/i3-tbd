@@ -1,86 +1,122 @@
 @at-root {
-  .events {
-    display: flex;
-    width: 100%;
+	.event-archive-container {}
 
-    .event {
-      border-left: 1px solid $color-two-200;
-      padding: 0 18px;
-      width: 14.29%;
-      flex: 1 1 auto;
+	.event-archive-header {
+		margin-bottom: 32px;
 
-      .event-date {
-        display: inline-block;
-        padding: 3px 6px 3px 20px;
-        min-width: 110px;
-        background-color: $color-two-100;
-        margin-left: -18px;
-        margin-bottom: 32px;
+		.title {
+			@include font-size-900;
+			font-family: $display;
+			font-weight: 400;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
 
-        p {
-          margin-bottom: 0;
-          font-family: $display;
-          text-transform: uppercase;
-          @include font-size-600;
-        }
-      }
-
-      .event-list {
-        .no-event {
-          @include font-size-600;
-          color: $color-500;
-          font-family: $display;
-          text-transform: uppercase;
-        }
-
-        .event-item {
-          &:not(:last-child) {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid $color-two-200;
-          }
-
-          .category {
-            display: inline-block;
-            padding: 4px 8px;
-            background-color: $color-300;
-            margin-bottom: 12px;
-            font-family: $display;
-            text-transform: uppercase;
-          }
-          .title {
-            margin-bottom: 8px;
-            @include font-size-500;
-          }
-
-          a {
-            @include font-size-400;
-          }
-        }
-      }
-    }
-  }
+	.event-archive-footer {
+		margin-top: 32px;
+	}
 }
 
 @at-root {
-  .event-pagination {
-    display: table;
-    width: 100%;
+	.event-columns {
+		display: flex;
+		width: 100%;
+	}
 
-    .pagination-left,
-    .pagination-right {
-      display: block;
-      font-weight: 700;
-      color: $color-600;
-      @include font-size-500;
-    }
+	.event-column {
+		border-left: 1px solid $color-two-200;
+		flex: 1 1 auto;
+		padding: 0 16px;
+		width: 14.29%;
+	}
 
-    .pagination-left {
-      float: left;
-    }
+	.event-column-date {
+		background-color: $color-two-100;
+		display: inline-block;
+		padding: 0 16px 0 16px;
+		margin-bottom: 32px;
+		margin-left: -16px;
+		min-width: 96px;
 
-    .pagination-right {
-      float: right;
-    }
-  }
+		&.is-current {
+			background-color: $color-two-200;
+
+			.day,
+			.date {
+				color: $color-text;
+			}
+		}
+
+		.day,
+		.date {
+			color: $color-text-light;
+			font-family: $display;
+			font-size: $font-size-600;
+			line-height: 1.33334;
+			margin-bottom: 0;
+			text-transform: uppercase;
+		}
+
+		.date {
+			@include font-size-500;
+		}
+	}
+}
+
+@at-root {
+	.event-item {
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid $color-two-200;
+		}
+
+		&.is-empty {
+
+			.note {
+				color: $color-text-light;
+				font-family: $display;
+				text-transform: uppercase;
+			}
+		}
+
+		.category {
+			@include font-size-300;
+			background-color: $color-200;
+			display: inline-block;
+			font-family: $display;
+			margin-bottom: 8px;
+			padding: 2px 4px;
+			text-transform: uppercase;
+		}
+
+		.title {
+			@include font-size-h6;
+			margin-bottom: 4px;
+		}
+
+		a {
+			@include font-size-400;
+		}
+	}
+}
+
+@at-root {
+	.event-pagination {
+		display: flex;
+		justify-content: space-between;
+
+		.arrow {
+			color: $color-text-light;
+			flex: 0 0 auto;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			.icon {
+				fill: $color-text-lighter;
+			}
+		}
+	}
 }

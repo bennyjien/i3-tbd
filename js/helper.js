@@ -1,6 +1,6 @@
 /* This file contains helper functions
  */
- /* global window document anime */
+/* global window document anime */
 
 // get parameter in url
 function getParameterByName(name, url) {
@@ -63,12 +63,13 @@ function equalheight(elements) {
 		$elements.forEach(element => {
 			$this = element;
 			$this.style.minHeight = 0;
-			topPosition = $this.offsetTop;
+			topPosition = $this.getBoundingClientRect().top;
 
 			if (currentRowStart !== topPosition) {
 				for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
 					rowDivs[currentDiv].style.minHeight = currentHighest + 'px';
 				}
+
 				rowDivs.length = 0;
 				currentRowStart = topPosition;
 				currentHighest = $this.offsetHeight;
@@ -86,6 +87,7 @@ function equalheight(elements) {
 
 	calculateHeight(elements);
 	window.addEventListener('resize', function() {
+		currentHighest = 0;
 		calculateHeight(elements);
 	});
 }

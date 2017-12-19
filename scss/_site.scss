@@ -29,7 +29,14 @@
 		z-index: 8;
 	}
 
+	.site-hero {
+		background-color: $color-bg-light;
+		text-align: center;
+	}
+
 	.site-content {
+		background-size: cover;
+		background-position: center;
 		display: flex;
 		flex: 1 0 auto;
 		flex-direction: column;

@@ -64,23 +64,86 @@
   }
 }
 
-.flickity-hero {
-  border-bottom: 24px solid $white;
-
-  @include breakpoint(walker) {
-    border-bottom: 0;
-  }
-
-  .flickity-page-dots {
-    bottom: -24px;
+@at-root {
+  .flickity-hero {
+    border-bottom: 24px solid $white;
 
     @include breakpoint(walker) {
-      bottom: 16px;
-      width: 33.333333333%;
+      border-bottom: 0;
     }
 
-    @include breakpoint(jumper) {
-      bottom: 32px;
+    .flickity-page-dots {
+      bottom: -24px;
+
+      @include breakpoint(walker) {
+        bottom: 16px;
+        width: 33.333333333%;
+      }
+
+      @include breakpoint(jumper) {
+        bottom: 32px;
+      }
+    }
+  }
+}
+
+@at-root {
+  .flickity-gallery {}
+
+  .flickity-gallery-slide {
+
+    .flickity-viewport {
+      padding-top: 66.66667%;
+      position: relative;
+      width: 100%;
+    }
+
+    .flickity-slider {
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .flickity-gallery-nav {
+
+    .flickity-prev-next-button {
+      background-color: transparent;
+      padding: 0;
+      height: 24px;
+      width: 24px;
+
+      @include breakpoint(creeper) {
+        height: 32px;
+        width: 32px;
+      }
+
+      &[disabled] {
+        display: none;
+      }
+
+      &.previous {
+        left: -12px;
+
+        @include breakpoint(creeper) {
+          left: -20px;
+        }
+      }
+
+      &.next {
+        right: -12px;
+
+        @include breakpoint(creeper) {
+          right: -20px;
+        }
+      }
+
+      svg {
+        display: block;
+        position: static;
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }

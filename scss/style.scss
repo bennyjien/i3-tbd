@@ -32,7 +32,6 @@ Tags: responsive-layout, mobile-first
 
 // containers
 @import "site";
-@import "widget";
 @import "popup";
 
 // main
@@ -47,6 +46,7 @@ Tags: responsive-layout, mobile-first
 @import "contact";
 @import "event";
 @import "faq";
+@import "flyer";
 @import "form";
 @import "home";
 @import "missing";
@@ -54,12 +54,15 @@ Tags: responsive-layout, mobile-first
 @import "page";
 @import "pagination";
 @import "rating";
+@import "review";
 @import "search";
 @import "shop";
+@import "social";
 @import "slider";
 @import "table";
 @import "toggle";
 @import "vendor";
+@import "widget";
 
 // media
 @import "mobile";

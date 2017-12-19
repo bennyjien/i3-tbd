@@ -1,0 +1,41 @@
+@at-root {
+	.social-share {
+
+		.list {
+			display: flex;
+		}
+
+		.item {
+			flex: 0 0 auto;
+
+			&:not(:last-child) {
+				margin-right: 8px;
+			}
+
+			a {
+				color: $color-text;
+			}
+		}
+
+		.icon {
+			height: 20px;
+			width: 20px;
+
+			&.icon-facebook {
+				fill: $color-facebook;
+			}
+
+			&.icon-twitter {
+				fill: $color-twitter;
+			}
+
+			&.icon-googleplus {
+				fill: $color-googleplus;
+			}
+
+			&.icon-pinterest {
+				fill: $color-pinterest;
+			}
+		}
+	}
+}
