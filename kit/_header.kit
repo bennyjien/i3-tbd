@@ -17,6 +17,7 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#B08B53">
 		<meta name="theme-color" content="#ffffff">
 
 		<!--build:js modernizr.js -->
@@ -107,21 +108,27 @@
 		<div id="site-container" class="site-container">
 
 			<nav id="mobile-nav" class="mobile-nav" role="navigation">
-				<ul class="list">
-					<li class="<!-- $article-nav -->"><a href="article-archive.html" class="link">The Wedding</a></li>
-					<li class="item"><a href="#" class="link">The Engagement</a></li>
-					<li class="item"><a href="#" class="link">Meet The Expert</a></li>
-					<li class="item"><a href="#" class="link">Behind The Scene</a></li>
-					<li class="item"><a href="#" class="link">How To</a></li>
-					<li class="<!-- $events-nav -->"><a href="event.html" class="link">Events</a></li>
-					<li class="<!-- $vendor-nav -->"><a href="#" class="link"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-vendor" /></svg> Vendor Directory</a></li>
-				</ul>
+				<div class="mobile-nav-bloc">
+					<p class="legend">Articles</p>
+					<ul class="list">
+						<li class="<!-- $article-nav -->"><a href="article-archive.html" class="link">The Wedding</a></li>
+						<li class="item"><a href="#" class="link">The Engagement</a></li>
+						<li class="item"><a href="#" class="link">Meet The Expert</a></li>
+						<li class="item"><a href="#" class="link">Behind The Scene</a></li>
+						<li class="item"><a href="#" class="link">How To</a></li>
+					</ul>
+				</div>
 
-				<ul class="list">
-					<li class="<!-- $account-nav -->"><a href="account-dashboard.html" class="link">My Account</a></li>
-					<li class="<!-- $article-submit-nav -->"><a href="article-submit.html" class="link">Submit Your Story</a></li>
-					<li class="<!-- $shop-nav -->"><a href="#" class="link">Shop</a></li>
-				</ul>
+				<div class="mobile-nav-bloc">
+					<p class="legend">Menu</p>
+					<ul class="list">
+						<li class="<!-- $vendor-nav -->"><a href="#" class="link"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-vendor" /></svg> Vendor Directory</a></li>
+						<li class="<!-- $events-nav -->"><a href="event.html" class="link">Events</a></li>
+						<li class="<!-- $account-nav -->"><a href="account-dashboard.html" class="link">My Account</a></li>
+						<li class="<!-- $article-submit-nav -->"><a href="article-submit.html" class="link">Submit Your Story</a></li>
+						<li class="<!-- $shop-nav -->"><a href="#" class="link">Shop</a></li>
+					</ul>
+				</div>
 			</nav>
 
 			<header id="site-header" class="site-header" role="banner">
@@ -143,9 +150,9 @@
 
 							<nav id="site-brand-pagenav" class="site-brand-pagenav" role="navigation">
 								<ul class="list">
-									<li class="<!-- $account-nav -->"><a href="account-dashboard.html" class="link">My Account</a></li>
-									<li class="<!-- $article-submit-nav -->"><a href="article-submit.html" class="link">Submit Your Story</a></li>
 									<li class="<!-- $shop-nav -->"><a href="#" class="link">Shop</a></li>
+									<li class="<!-- $article-submit-nav -->"><a href="article-submit.html" class="link">Submit Your Story</a></li>
+									<li class="<!-- $account-nav -->"><a href="account-dashboard.html" class="link">My Account</a></li>
 								</ul>
 							</nav>
 

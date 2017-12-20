@@ -1,6 +1,7 @@
 <!-- @import variables -->
 <!-- $account-nav: item item-current -->
 <!-- $account-messages-nav: item item-current -->
+<!-- $account-nav-label: Messages -->
 <!-- @import header -->
 
 <div id="site-content" class="site-content">
@@ -14,9 +15,10 @@
 
 					<div class="account-page-content">
 						<div class="account-section">
-							<div class="message-stat">
+							<p class="message-count">You have received 412 messages <a href="#message-stat" class="message-stat-toggle js-toggle" data-toggle-area="body">(view statistics)</a></p>
+
+							<div id="message-stat" class="message-stat table-responsive">
 								<table class="table table-stat">
-									<caption>You have received 412 messages (<a href="#">view statistics</a>)</caption>
 									<thead>
 										<tr>
 											<th></th>
@@ -71,9 +73,7 @@
 									</tbody>
 								</table>
 							</div>
-						</div>
 
-						<div class="account-section">
 							<div class="message-list">
 								<div class="message-list-table">
 									<table class="table table-plain">
@@ -81,7 +81,7 @@
 											<tr>
 												<th>Date</th>
 												<th>Email</th>
-												<th>Message</th>
+												<th class="message">Message</th>
 											</tr>
 										</thead>
 										<tbody>

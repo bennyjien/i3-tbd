@@ -147,7 +147,11 @@
 		.bullet {
 			float: left;
 			padding: 4px;
-			width: 12.5%;
+      width: 25%;
+
+      @include breakpoint(crawler) {
+        width: 12.5%;
+      }
 
 			@include breakpoint(jumper) {
 				padding: 8px;

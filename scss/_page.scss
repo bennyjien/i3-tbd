@@ -7,10 +7,14 @@
 		margin-bottom: 32px;
 
 		.title {
-			@include font-size-900;
+			@include font-size-800;
 			font-family: $display;
 			font-weight: 400;
 			text-transform: uppercase;
+
+			@include breakpoint(crawler) {
+				@include font-size-900;
+			}
 
 			&:not(:last-child) {
 				margin-bottom: 8px;

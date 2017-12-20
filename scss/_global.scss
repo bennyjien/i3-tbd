@@ -38,8 +38,12 @@
 		@include font-size-600;
 		font-weight: 700;
 		max-width: 100%;
-		min-width: 320px;
 		padding: 7px 24px;
+		width: 100%;
+
+		@include breakpoint(crawler) {
+			width: 256px;
+		}
 	}
 
 	&.button-full {
@@ -325,7 +329,6 @@
 
 		th,
 		td {
-			border: 0;
 			padding-left: 12px;
 			padding-right: 12px;
 
@@ -336,6 +339,10 @@
 			&:last-child {
 				padding-right: 0;
 			}
+		}
+
+		td {
+			border: 0;
 		}
 	}
 

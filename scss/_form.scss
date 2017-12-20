@@ -665,7 +665,11 @@
 		border: 1px solid $color-border;
 		float: left;
 		margin-right: 16px;
-		width: 120px;
+		width: 80px;
+
+		@include breakpoint(creeper) {
+			width: 120px;
+		}
 	}
 
 	.form-image-file {

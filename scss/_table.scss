@@ -9,7 +9,7 @@
 		background-repeat: no-repeat;
 		background-size: 36px 100%, 36px 100%, 12px 100%, 12px 100%;
 		border: 1px solid $color-border;
-		overflow-x: auto;
+		overflow-x: auto !important;
 
 		.table {
 			background-color: transparent;

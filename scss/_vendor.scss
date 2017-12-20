@@ -6,14 +6,19 @@
 		text-align: center;
 
 		.title {
-			@include font-size-900;
+			@include font-size-800;
 			font-family: $display;
 			font-weight: 400;
 			margin-bottom: 4px;
 			text-transform: uppercase;
+
+			@include breakpoint(crawler) {
+				@include font-size-900;
+			}
 		}
 
 		.subtitle {
+			@include font-size-400;
 			color: $color-text-light;
 			margin: 0 auto;
 			max-width: 480px;
@@ -29,16 +34,22 @@
 	.vendor-single-container {}
 
 	.vendor-single-content {
-		align-items: flex-start;
-		display: flex;
+
+		@include breakpoint(runner) {
+			align-items: flex-start;
+			display: flex;
+		}
 
 		.section {
 
 			&.section-aside {
 				@include aside;
 				@include aside-left;
-				position: sticky;
-				top: 24px;
+
+				@include breakpoint(runner) {
+					position: sticky;
+					top: 24px;
+				}
 			}
 
 			&.section-main {
@@ -79,12 +90,31 @@
 @at-root {
 	.vendor-overviews {
 		@include clearfix;
-		margin: -24px -12px;
+		margin: -12px -8px;
+
+		@include breakpoint(crawler) {
+			margin: -24px -12px;
+		}
 
 		&.vendor-overviews-full {
 
 			.vendor-overview {
-				width: 25%;
+
+				@include breakpoint(walker) {
+					width: 25%;
+
+					&:nth-child(2n+1) {
+						clear: none;
+					}
+
+					&:nth-child(3n+1) {
+						clear: none;
+					}
+
+					&:nth-child(4n+1) {
+						clear: both;
+					}
+				}
 			}
 		}
 	}
@@ -95,20 +125,46 @@
 
 	.vendor-overview {
 		float: left;
-		padding: 24px 12px;
+		padding: 12px 8px;
 		position: relative;
-		width: 33.33334%;
+		width: 50%;
+
+		&:nth-child(2n+1) {
+			clear: both;
+		}
+
+		@include breakpoint(crawler) {
+			padding: 24px 12px;
+		}
+
+		@include breakpoint(runner) {
+			width: 33.33334%;
+
+			&:nth-child(2n+1) {
+				clear: none;
+			}
+
+			&:nth-child(3n+1) {
+				clear: both;
+			}
+		}
 
 		.link {
 			display: flex;
 			flex-direction: column;
+			text-decoration: none;
 		}
 	}
 
 	.vendor-overview-badge {
-		left: 20px;
+		left: 16px;
 		position: absolute;
-		top: 32px;
+		top: 20px;
+
+		@include breakpoint(crawler) {
+			left: 20px;
+			top: 32px;
+		}
 
 		.badge {
 			@include font-size-100;
@@ -133,12 +189,21 @@
 	.vendor-overview-detail {
 		background-color: $color-one-100;
 		color: $color-text;
-		margin: -36px 24px 0 24px;
+		margin: -36px 8px 0 8px;
 		flex: 1 1 0;
-		padding: 12px 16px;
+		padding: 8px;
 		position: relative;
 		text-align: center;
 		z-index: 1;
+
+		@include breakpoint(creeper) {
+			margin: -36px 16px 0 16px;
+		}
+
+		@include breakpoint(crawler) {
+			margin: -36px 24px 0 24px;
+			padding: 12px 16px;
+		}
 
 		.meta {
 			@include font-size-400;
@@ -148,14 +213,23 @@
 		}
 
 		.name {
-			@include font-size-h5;
+			@include font-size-h6;
+
+			@include breakpoint(crawler) {
+				@include font-size-h5;
+			}
 		}
 	}
 
 	.vendor-overview-action {
-		right: 20px;
+		right: 12px;
 		position: absolute;
-		top: 32px;
+		top: 16px;
+
+		@include breakpoint(crawler) {
+			right: 20px;
+			top: 32px;
+		}
 
 		.action {
 			background-color: $color-100;
@@ -168,6 +242,11 @@
 
 			&.is-active {
 				color: $color-alert-dark;
+
+				&:hover,
+				&:focus {
+					color: $color-text-light;
+				}
 			}
 		}
 
@@ -212,6 +291,17 @@
 			justify-content: center;
 		}
 
+		a {
+
+			&:hover,
+			&:focus {
+
+				.name {
+					color: $color-one-600;
+				}
+			}
+		}
+
 		.name {
 			@include font-size-200;
 			background-color: rgba($white, 0.64);
@@ -223,6 +313,7 @@
 			position: absolute;
 			text-align: center;
 			text-transform: uppercase;
+			transition: all 0.2s ease;
 			width: 100%;
 		}
 
@@ -253,9 +344,13 @@
 	.vendor-arranger {
 		align-items: center;
 		border-bottom: 1px solid $color-border;
-		display: flex;
+		display: none;
 		margin-bottom: 24px;
 		padding-bottom: 16px;
+
+		@include breakpoint(runner) {
+			display: flex;
+		}
 	}
 
 	.vendor-arranger-search {
@@ -297,9 +392,12 @@
 
 @at-root {
 	.vendor-card {
-		background-color: $color-100;
-		border: 1px solid $color-border;
-		padding: 24px;
+
+		@include breakpoint(runner) {
+			background-color: $color-100;
+			border: 1px solid $color-border;
+			padding: 24px;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 24px;
@@ -322,8 +420,14 @@
 			text-transform: uppercase;
 		}
 	}
+}
 
-	.vendor-card-action {
+@at-root {
+	.vendor-action {
+
+		&:not(:first-child) {
+			margin-bottom: 24px;
+		}
 
 		.item {
 
@@ -347,18 +451,25 @@
 	}
 
 	.vendor-bio-head {
-		margin-bottom: 16px;
+		margin-bottom: 8px;
 
 		.title {
-			@include font-size-h3;
+			@include font-size-h4;
 			text-transform: uppercase;
+
+			@include breakpoint(crawler) {
+				@include font-size-h3;
+			}
 		}
 	}
 }
 
 @at-root {
 	.vendor-meta {
-		display: flex;
+
+		@include breakpoint(crawler) {
+			display: flex;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 24px;
@@ -410,19 +521,23 @@
 }
 
 @at-root {
-  .vendor-regbox {
-    border: 3px double $color-400;
-    margin: 3em 0 1.5em;
-    padding: 0 1.8em 1.8em;
+  .vendor-register {
+    border: 3px double $color-border;
+    margin-top: 48px;
+    padding: 0 16px 16px;
     position: relative;
 		width: 100%;
+
+		@include breakpoint(creeper) {
+			padding: 0 24px 24px;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 32px;
 		}
 	}
 
-	.vendor-regbox-header {
+	.vendor-register-head {
 		left: 0;
 		position: relative;
 		text-align: center;
@@ -467,12 +582,12 @@
 		}
 
 		.tagline {
-			@include font-size-500;
+			@include font-size-400;
 			color: $color-500;
 		}
 	}
 
-	.vendor-regbox-form {
+	.vendor-register-form {
 
 		.label {
 			margin-bottom: 6px;
@@ -485,7 +600,7 @@
 		}
 	}
 
-  .vendor-regbox-action {
+  .vendor-register-action {
     text-align: center;
   }
 }

@@ -1,0 +1,32 @@
+@at-root {
+	.message-count {
+		@include font-size-400;
+		color: $color-text-light;
+		margin-bottom: 8px;
+	}
+}
+
+@at-root {
+	.message-stat {
+		display: none;
+		margin-bottom: 16px;
+	}
+
+	.message-stat-toggle {
+		display: inline-block;
+	}
+}
+
+@at-root {
+	.message-list-table {
+		@include font-size-400;
+
+		.message {
+			display: none;
+
+			@include breakpoint(crawler) {
+				display: table-cell;
+			}
+		}
+	}
+}

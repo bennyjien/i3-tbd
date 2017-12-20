@@ -20,23 +20,10 @@
 												<span class="count">23 reviews</span>
 											</div>
 										</div>
-										<div class="vendor-card-action">
-											<ul class="list">
-												<li class="item"><a href="#" class="button button-gray"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-heart" /></svg> Save Vendor</a></li>
-												<li class="item"><a href="#" class="button button-gray">Message Vendor</a></li>
-												<li class="item"><a href="#" class="button button-gray">Download Pricelist</a></li>
-											</ul>
-										</div>
+										<div id="vendor-action-desktop"></div>
 									</div>
 
-									<div class="social-share">
-										<ul class="list">
-											<li class="item"><a href="#"><svg class="icon icon-facebook" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-facebook" /></svg></a></li>
-											<li class="item"><a href="#"><svg class="icon icon-twitter" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-twitter" /></svg></a></li>
-											<li class="item"><a href="#"><svg class="icon icon-googleplus" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-googleplus" /></svg></a></li>
-											<li class="item"><a href="#"><svg class="icon icon-pinterest" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-pinterest" /></svg></a></li>
-										</ul>
-									</div>
+									<div id="social-share-desktop"></div>
 								</section>
 
 								<section class="section section-main">
@@ -91,12 +78,29 @@
 										</div>
 									</div>
 
+									<div class="vendor-action js-mover" data-mover-breakpoint="1024" data-mover-target="#vendor-action-desktop">
+										<ul class="list">
+											<li class="item"><a href="#" class="button button-gray"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-heart" /></svg> Save Vendor</a></li>
+											<li class="item"><a href="#" class="button button-gray">Message Vendor</a></li>
+											<li class="item"><a href="#" class="button button-gray">Download Pricelist</a></li>
+										</ul>
+									</div>
+
+									<div class="social-share js-mover" data-mover-breakpoint="1024" data-mover-target="#social-share-desktop">
+										<ul class="list">
+											<li class="item"><a href="#"><svg class="icon icon-facebook" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-facebook" /></svg></a></li>
+											<li class="item"><a href="#"><svg class="icon icon-twitter" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-twitter" /></svg></a></li>
+											<li class="item"><a href="#"><svg class="icon icon-googleplus" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-googleplus" /></svg></a></li>
+											<li class="item"><a href="#"><svg class="icon icon-pinterest" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-pinterest" /></svg></a></li>
+										</ul>
+									</div>
+
 									<div class="vendor-section">
 										<div class="vendor-section-head">
 											<h3 class="title">Our Works are Featured Here</h3>
 										</div>
 										<div class="vendor-section-body">
-											<div class="article-overviews article-overviews-trio">
+											<div class="article-overviews article-overviews-full">
 												<div class="article-overview">
 													<a href="article-single.html" class="link">
 														<div class="article-overview-thumbnail">
@@ -156,8 +160,10 @@
 											</div>
 										</div>
 										<div class="vendor-section-foot">
-											<a href="#" class="button button-gray">Load More Reviews</a>
-											<a href="#" class="button">Write A Review</a>
+											<ul class="list list-inline">
+												<li class="item"><a href="#" class="button button-gray">Load More Reviews</a></li>
+												<li class="item"><a href="#" class="button">Write A Review</a></li>
+											</ul>
 										</div>
 									</div>
 								</section>
@@ -169,7 +175,7 @@
 										<h4 class="title">Other Vendors You May Like</h4>
 									</div>
 									<div class="vendor-related-body">
-										<div class="vendor-overviews">
+										<div class="vendor-overviews vendor-overviews-full">
 											<div class="vendor-overview">
 												<a href="vendor-single.html" class="link">
 													<div class="vendor-overview-thumbnail">

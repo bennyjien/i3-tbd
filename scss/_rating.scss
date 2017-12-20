@@ -62,8 +62,11 @@
 
 @at-root {
 	.rating-histogram {
-		display: flex;
 		margin-bottom: 24px;
+
+		@include breakpoint(crawler) {
+			display: flex;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -72,7 +75,12 @@
 
 	.rating-histogram-summary {
 		flex: 0 0 auto;
-		margin-right: 32px;
+		margin-bottom: 16px;
+
+		@include breakpoint(crawler) {
+			margin-bottom: 0;
+			margin-right: 32px;
+		}
 
 		.average {
 			font-size: $font-size-h6;

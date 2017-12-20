@@ -29,11 +29,6 @@
 		z-index: 8;
 	}
 
-	.site-hero {
-		background-color: $color-bg-light;
-		text-align: center;
-	}
-
 	.site-content {
 		background-size: cover;
 		background-position: center;
@@ -46,13 +41,20 @@
 			display: flex;
 			flex: 1 1 auto;
 			flex-direction: column;
-			padding-bottom: 48px;
-			padding-top: 48px;
+			padding-bottom: 24px;
+			padding-top: 24px;
 			width: 100%;
+
+			@include breakpoint(creeper) {
+				padding-bottom: 32px;
+				padding-top: 32px;
+			}
 
 			@include breakpoint(runner) {
 				flex-direction: row;
 				justify-content: space-between;
+				padding-bottom: 48px;
+				padding-top: 48px;
 			}
 
 			&.inner-zero {
@@ -196,8 +198,15 @@
 	}
 
 	.site-search-toggle {
+		color: $color-text-light;
+		display: block;
 		height: 24px;
+		padding: 2px;
 		width: 24px;
+
+		&.is-toggled {
+			color: $color-one-600;
+		}
 
 		&.site-search-toggle-mobile {
 			margin-top: -12px;
@@ -219,7 +228,9 @@
 		}
 
 		.icon {
+			display: block;
 			height: 20px;
+			transition: all 0.2s ease;
 			width: 20px;
 		}
 	}
@@ -316,6 +327,13 @@
 				@include font-size-400;
 				display: block;
 				padding: 2px 0;
+				transition: all 0.2s ease;
+
+				&:hover,
+				&:focus {
+					color: $color-one-500;
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -335,6 +353,35 @@
 		.item {
 			display: inline-block;
 			margin: 0 8px 8px 0;
+
+			a {
+				@include font-size-400;
+				display: block;
+				padding: 2px 0;
+
+				&:hover,
+				&:focus {
+
+					.icon {
+
+						&.icon-facebook {
+							fill: $color-facebook-alt;
+						}
+
+						&.icon-instagram {
+							fill: $color-instagram;
+						}
+
+						&.icon-pinterest {
+							fill: $color-pinterest;
+						}
+					}
+				}
+			}
+		}
+
+		.icon {
+			transition: all 0.2s ease;
 		}
 	}
 }
@@ -352,6 +399,13 @@
 
 		a {
 			color: $color-400;
+			transition: all 0.2s ease;
+
+			&:hover,
+			&:focus {
+				color: $color-one-500;
+				text-decoration: none;
+			}
 		}
 
 		.attribution {

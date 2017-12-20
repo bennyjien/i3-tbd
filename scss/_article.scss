@@ -12,7 +12,12 @@
 		}
 
 		.subtitle {
+			@include font-size-400;
 			color: $color-text-light;
+
+			@include breakpoint(crawler) {
+				@include font-size-500;
+			}
 		}
 	}
 
@@ -63,6 +68,7 @@
 		}
 
 		.meta {
+			@include font-size-400;
 			color: $color-text-light;
 
 			a {
@@ -73,8 +79,11 @@
 	}
 
 	.article-single-content {
-		align-items: flex-start;
-		display: flex;
+
+		@include breakpoint(jumper) {
+			align-items: flex-start;
+			display: flex;
+		}
 	}
 
 	.article-single-footer {
@@ -99,12 +108,28 @@
 }
 
 @at-root {
+	.article-hero {
+		background-color: $color-bg-light;
+		text-align: center;
+	}
+}
+
+@at-root {
 	.article-arranger {
+		@include font-size-400;
 		align-items: center;
 		border-bottom: 1px solid $color-border;
-		display: flex;
+		display: none;
 		margin-bottom: 24px;
 		padding-bottom: 16px;
+
+		@include breakpoint(crawler) {
+			@include font-size-500;
+		}
+
+		@include breakpoint(runner) {
+			display: flex;
+		}
 	}
 
 	.article-arranger-filter {
@@ -114,10 +139,15 @@
 
 		.label {
 			color: $color-text-light;
+			display: none;
 			flex: 0 0 auto;
 			font-style: italic;
 			margin-bottom: 0;
 			margin-right: 16px;
+
+			@include breakpoint(runner) {
+				display: block;
+			}
 		}
 
 		.selects {
@@ -128,6 +158,7 @@
 		.select {
 			flex: 1 1 0;
 			height: auto;
+			min-width: none;
 			padding: 8px;
 
 			&:not(:last-child) {
@@ -147,7 +178,11 @@
 	.article-arranger-sort {
 		flex: 0 0 auto;
 		margin-left: auto;
-		padding-left: 48px;
+		padding-left: 24px;
+
+		@include breakpoint(runner) {
+			padding-left: 32px;
+		}
 
 		.label {
 			color: $color-text-light;
@@ -158,13 +193,13 @@
 @at-root {
 	.article-overviews {
 		@include clearfix;
-		margin: -8px;
+		margin: -12px -8px;
 
 		@include breakpoint(crawler) {
-			margin: -12px;
+			margin: -16px -12px;
 		}
 
-		&.article-overviews-trio {
+		&.article-overviews-full {
 
 			.article-overview {
 
@@ -176,11 +211,11 @@
 
 		.article-overview {
 			float: left;
-			padding: 8px;
+			padding: 12px 8px;
 			width: 50%;
 
 			@include breakpoint(crawler) {
-				padding: 12px;
+				padding: 16px 12px;
 			}
 		}
 	}
@@ -251,9 +286,14 @@
 	}
 
 	.article-overview-action {
-		right: 20px;
+		right: 12px;
 		position: absolute;
-		top: 20px;
+		top: 16px;
+
+		@include breakpoint(crawler) {
+			right: 20px;
+			top: 24px;
+		}
 
 		.action {
 			background-color: $color-100;
@@ -262,10 +302,16 @@
 			height: 36px;
 			padding: 8px;
 			text-align: center;
+			transition: all 0.2s ease;
 			width: 36px;
 
 			&.is-active {
 				color: $color-alert-dark;
+
+				&:hover,
+				&:focus {
+					color: $color-text-light;
+				}
 			}
 		}
 
@@ -321,20 +367,57 @@
 
 @at-root {
 	.article-share {
+		margin-top: 24px;
+
+		@include breakpoint(jumper) {
+			margin-left: 32px;
+			margin-top: 0;
+			position: sticky;
+			top: 24px;
+		}
 
 		.share {
 			background-color: $color-100;
 			border: 1px solid $color-border;
 			border-radius: 24px;
 			color: $color-text-light;
-			display: block;
+			display: inline-block;
 			height: 40px;
 			position: relative;
 			text-align: center;
+			transition: all 0.2s ease;
 			width: 40px;
 
+			@include breakpoint(jumper) {
+				display: block;
+			}
+
 			&:not(:last-child) {
-				margin-bottom: 8px;
+				margin-right: 4px;
+
+				@include breakpoint(jumper) {
+					margin-bottom: 8px;
+					margin-right: 0;
+				}
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $white;
+				border-color: $color-border-dark;
+				color: $color-one-500;
+
+				&.share-love {
+					color: $color-two-500;
+				}
+
+				&.share-facebook {
+					color: $color-facebook;
+				}
+
+				&.share-twitter {
+					color: $color-twitter;
+				}
 			}
 		}
 
@@ -349,17 +432,22 @@
 			@include font-size-100;
 			background-color: $color-two-500;
 			border-radius: 10px;
+			bottom: -10px;
 			color: $white;
 			height: 20px;
-			left: 30px;
+			left: 10px;
 			line-height: 20px;
-			margin-top: -10px;
 			min-width: 20px;
 			max-width: 32px;
 			padding: 0 4px;
 			position: absolute;
 			text-align: center;
-			top: 50%;
+
+			@include breakpoint(jumper) {
+				bottom: auto;
+				left: 30px;
+				top: 10px;
+			}
 		}
 	}
 }
@@ -375,23 +463,35 @@
 
 	.article-guide-label {
 		color: $color-text-light;
+		display: none;
 		margin-bottom: 0;
-		margin-right: 32px;
-		flex: 0 0 auto;
+		flex: 1 1 0;
 		font-style: italic;
+		padding-right: 16px;
+
+		@include breakpoint(crawler) {
+			display: block;
+		}
 	}
 
 	.article-guide-items {
 		align-items: center;
 		display: flex;
-		flex: 1 1 0;
+		flex: 3 1 0;
 	}
 
 	.article-guide-item {
+		@include font-size-400;
 		flex: 1 1 0;
 
+		@include breakpoint(crawler) {
+			@include font-size-500;
+		}
+
 		&:not(:last-child) {
-			margin-right: 16px;
+			border-right: 1px solid $color-border;
+			margin-right: 8px;
+			padding-right: 8px;
 		}
 
 		.label {
@@ -409,15 +509,10 @@
 
 @at-root {
 	.article-post {
-		@include font-size-600;
-	}
-}
 
-@at-root {
-	.article-share {
-		margin-left: 32px;
-		position: sticky;
-		top: 24px;
+		@include breakpoint(crawler) {
+			@include font-size-600;
+		}
 	}
 }
 
@@ -442,8 +537,14 @@
 @at-root {
 	.article-vendor {
 		border: 1px solid $color-border;
+		margin: 8px auto 0;
+		max-width: 480px;
 		padding: 24px 16px 16px;
 		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
 	}
 
 	.article-vendor-head {

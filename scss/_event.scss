@@ -21,31 +21,55 @@
 @at-root {
 	.event-columns {
 		display: flex;
+		flex-direction: column;
 		width: 100%;
+
+		@include breakpoint(runner) {
+			flex-direction: row;
+		}
 	}
 
 	.event-column {
-		border-left: 1px solid $color-two-200;
-		flex: 1 1 auto;
-		padding: 0 16px;
-		width: 14.29%;
+		border: 1px solid $color-border;
+		flex: 1 1 0;
+
+		@include breakpoint(runner) {
+			border: 0;
+			border-left: 1px solid $color-border;
+			margin-bottom: 0;
+			padding: 0 8px;
+			width: 14.28572%;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+
+		&.is-current {
+			border-color: $color-two-200;
+
+			.event-column-date {
+				background-color: $color-two-100;
+
+				.day,
+				.date {
+					color: $color-text;
+				}
+			}
+		}
 	}
 
 	.event-column-date {
-		background-color: $color-two-100;
-		display: inline-block;
-		padding: 0 16px 0 16px;
-		margin-bottom: 32px;
-		margin-left: -16px;
+		background-color: $color-100;
+		display: flex;
+		padding: 2px 8px 2px 8px;
+		margin-bottom: 4px;
 		min-width: 96px;
 
-		&.is-current {
-			background-color: $color-two-200;
-
-			.day,
-			.date {
-				color: $color-text;
-			}
+		@include breakpoint(runner) {
+			display: inline-block;
+			margin-bottom: 32px;
+			margin-left: -8px;
 		}
 
 		.day,
@@ -59,18 +83,34 @@
 		}
 
 		.date {
-			@include font-size-500;
+			margin-left: 4px;
+
+			@include breakpoint(runner) {
+				@include font-size-500;
+				margin-left: 0;
+			}
 		}
+	}
+
+	.event-column-body {
+		padding: 8px;
 	}
 }
 
 @at-root {
+	.event-items {}
+
 	.event-item {
 
 		&:not(:last-child) {
-			margin-bottom: 20px;
-			padding-bottom: 20px;
-			border-bottom: 1px solid $color-two-200;
+			border-bottom: 1px solid $color-border;
+			margin-bottom: 12px;
+			padding-bottom: 12px;
+
+			@include breakpoint(runner) {
+				margin-bottom: 16px;
+				padding-bottom: 16px;
+			}
 		}
 
 		&.is-empty {
@@ -82,9 +122,22 @@
 			}
 		}
 
+		.link {
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+
+				.title {
+					color: $color-one-600;
+				}
+			}
+		}
+
 		.category {
 			@include font-size-300;
-			background-color: $color-200;
+			background-color: $color-one-100;
+			color: $color-text;
 			display: inline-block;
 			font-family: $display;
 			margin-bottom: 8px;
@@ -94,11 +147,14 @@
 
 		.title {
 			@include font-size-h6;
-			margin-bottom: 4px;
+			color: $color-text;
+			margin-bottom: 2px;
+			transition: all 0.2s ease;
 		}
 
-		a {
-			@include font-size-400;
+		.more {
+			@include font-size-300;
+			color: $color-text-light;
 		}
 	}
 }

@@ -11,11 +11,15 @@
 	}
 
 	.about-coverage-media {
+		font-size: 0;
+		margin: 0 -4px -4px 0;
 
 		.image {
+			display: inline-block;
+			font-size: $font-size-500;
 			height: 45px;
-			margin-bottom: 2px;
-			margin-top: 2px;
+			margin: 0 4px 4px 0;
+			vertical-align: middle;
 		}
 	}
 }

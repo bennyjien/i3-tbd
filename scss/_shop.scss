@@ -33,6 +33,10 @@
 		@include breakpoint(walker) {
 			padding: 16px 16px 32px;
 		}
+
+		.link {
+			text-decoration: none;
+		}
 	}
 
 	.shop-product-thumbnail {
@@ -44,6 +48,7 @@
 		.name {
 			@include font-size-400;
 			margin-bottom: 2px;
+			transition: all 0.2s ease;
 
 			@include breakpoint(creeper) {
 				@include font-size-500;

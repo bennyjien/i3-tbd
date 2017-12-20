@@ -1,6 +1,21 @@
 @at-root {
   .flyer-widget {}
 
+  .flyer-widget-link {
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      .flyer-widget-text {
+
+        .text {
+          color: $color-one-600;
+        }
+      }
+    }
+  }
+
   .flyer-widget-image {
     margin-bottom: 8px;
   }
@@ -22,6 +37,7 @@
       color: $color-text;
       display: inline-block;
       font-weight: 700;
+      transition: all 0.2s ease;
     }
   }
 }

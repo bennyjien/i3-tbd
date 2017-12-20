@@ -12,12 +12,32 @@
 .wordpress-post {
 	@include clearfix;
 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+
+		&:not(:first-child) {
+			margin-top: 32px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
 	p {
 
 		+ ol,
 		+ ul {
 			margin-top: -16px;
 		}
+	}
+
+	ul {
+		padding-left: 20px;
 	}
 
 	.aligncenter {

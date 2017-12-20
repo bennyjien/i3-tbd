@@ -445,7 +445,7 @@
 					}
 				} else {
 					if ($this.parentNode !== $moverSource) {
-						$moverSource.appendChild($this);
+						$moverSource.parentNode.insertBefore($this, $moverSource.nextSibling);
 					}
 				}
 			});

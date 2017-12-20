@@ -17,16 +17,17 @@
 		color: $white;
 		display: block;
 		flex: 1 1 0;
-		padding-right: 32px;
-		margin-bottom: 48px;
+		margin-bottom: 24px;
 		width: 100%;
 
 		@include breakpoint(walker) {
+			margin-bottom: 48px;
+			padding-right: 32px;
 			width: 50%;
 		}
 	}
 
-	.contact-info-header {
+	.contact-info-head {
 		margin-bottom: 12px;
 
 		.title {
@@ -36,14 +37,13 @@
 		}
 	}
 
-	.contact-info-content {
+	.contact-info-body {
 		max-width: 400px;
 	}
 }
 
 @at-root {
 	.contact-form {
-		display: table;
 		flex: 0 0 auto;
 		width: 100%;
 
@@ -56,13 +56,13 @@
 		display: block;
 		float: right;
 		width: 100%;
-		padding: 24px 24px 28px;
+		padding: 20px 24px 24px;
 		border-radius: 6px;
 		background-color: #ffffff;
 
-		@include breakpoint(walker) {
-			max-width: 500px;
-			padding: 24px 36px 28px;
+		@include breakpoint(runner) {
+			max-width: 480px;
+			padding: 28px 32px 32px;
 		}
 
 		.label {

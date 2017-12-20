@@ -4,14 +4,14 @@
 .only-desktop {
 	display: none;
 
-	@include breakpoint(walker) {
+	@include breakpoint(runner) {
 		display: block;
 	}
 }
 
 .only-mobile {
 
-	@include breakpoint(walker) {
+	@include breakpoint(runner) {
 		display: none;
 	}
 }
