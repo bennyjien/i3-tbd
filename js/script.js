@@ -1,7 +1,7 @@
 /* This file contains main script for website
  * Style related scripts is located in style.js
  */
-/* global document jQuery imagesLoaded equalheight */
+/* global document jQuery imagesLoaded equalheight qq */
 
 // initialize when document is ready
 jQuery(document).ready(function($) {
@@ -12,6 +12,11 @@ jQuery(document).ready(function($) {
 	// equalheight
 	$('.js-vendor-overviews').imagesLoaded(function() {
 		equalheight('.js-vendor-overviews .vendor-overview .link');
+	});
+
+	// initialize Dropkick
+	$('.js-select').dropkick({
+		mobile: true
 	});
 
 	// initialize Flickity

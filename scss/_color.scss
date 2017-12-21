@@ -1,3 +1,162 @@
 @at-root {
-	.color-selector {}
+	.color-selector {
+
+		li.color {
+			padding-left: 22px;
+			text-indent: -22px;
+
+			&:before {
+				content: "";
+				background-color: #ffffff;
+				border-radius: 12px;
+				box-shadow: inset 0 0 0 1px rgba($black, 0.08);
+				display: inline-block;
+				height: 10px;
+				margin-right: 12px;
+				position: relative;
+				left: 8px;
+				width: 10px;
+			}
+
+			&.color-black {
+
+				&:before {
+					background-color: #000000;
+				}
+			}
+
+			&.color-brown {
+
+				&:before {
+					background-color: #8b4513;
+				}
+			}
+
+			&.color-chillired {
+
+				&:before {
+					background-color: #c21807;
+				}
+			}
+
+			&.color-darkgreen {
+
+				&:before {
+					background-color: #314f40;
+				}
+			}
+
+			&.color-darkred {
+
+				&:before {
+					background-color: #8b0000;
+				}
+			}
+
+			&.color-duskblue {
+
+				&:before {
+					background-color: #7da1bf;
+				}
+			}
+
+			&.color-gold {
+
+				&:before {
+					background-color: #cdad00;
+				}
+			}
+
+			&.color-hotpink {
+
+				&:before {
+					background-color: #ff69b4;
+				}
+			}
+
+			&.color-lightcoral {
+
+				&:before {
+					background-color: #f08080;
+				}
+			}
+
+			&.color-lightgoldenrod {
+
+				&:before {
+					background-color: #ffec8b;
+				}
+			}
+
+			&.color-midnightblue {
+
+				&:before {
+					background-color: #072949;
+				}
+			}
+
+			&.color-mintgreen {
+
+				&:before {
+					background-color: #bff6c5;
+				}
+			}
+
+			&.color-orange {
+
+				&:before {
+					background-color: #ffa500;
+				}
+			}
+
+			&.color-paleblue {
+
+				&:before {
+					background-color: #afeeee;
+				}
+			}
+
+			&.color-pink {
+
+				&:before {
+					background-color: #f8c5d4;
+				}
+			}
+
+			&.color-purple {
+
+				&:before {
+					background-color: #a020f0;
+				}
+			}
+
+			&.color-red {
+
+				&:before {
+					background-color: #ff0000;
+				}
+			}
+
+			&.color-rosequartz {
+
+				&:before {
+					background-color: #f7cac9;
+				}
+			}
+
+			&.color-silver {
+
+				&:before {
+					background-color: #cccccc;
+				}
+			}
+
+			&.color-white {
+
+				&:before {
+					background-color: #ffffff;
+				}
+			}
+		}
+	}
 }

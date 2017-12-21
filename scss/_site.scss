@@ -156,6 +156,7 @@
 		}
 
 		.item {
+			@include font-size-300;
 
 			&:not(:last-child) {
 				margin-right: 24px;
@@ -163,7 +164,6 @@
 		}
 
 		.link {
-			@include font-size-300;
 			color: $color-text;
 			font-weight: 400;
 			text-transform: uppercase;
@@ -357,7 +357,6 @@
 			a {
 				@include font-size-400;
 				display: block;
-				padding: 2px 0;
 
 				&:hover,
 				&:focus {
@@ -381,7 +380,10 @@
 		}
 
 		.icon {
+			display: block;
+			height: 20px;
 			transition: all 0.2s ease;
+			width: 20px;
 		}
 	}
 }

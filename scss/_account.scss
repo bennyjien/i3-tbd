@@ -7,9 +7,19 @@
 		padding-bottom: 8px;
 
 		.title {
+			@include font-size-h2;
 			font-family: $display;
 			font-weight: 400;
+			margin-bottom: 0;
 			text-transform: uppercase;
+		}
+
+		.subtitle {
+			@include font-size-400;
+
+			a {
+				text-decoration: none;
+			}
 		}
 	}
 }
@@ -68,9 +78,7 @@
 		margin-bottom: 16px;
 
 		.title {
-			@include font-size-h3;
-			font-family: $display;
-			font-weight: 400;
+			@include font-size-h5;
 			text-transform: uppercase;
 
 			&:not(:last-child) {

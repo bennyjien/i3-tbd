@@ -20,7 +20,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: $color-one-400;
+		background-color: $color-one-600;
 		color: $white;
 		outline: 0;
 		text-decoration: none;
@@ -60,8 +60,8 @@
 
 		&:hover,
 		&:focus {
-			border-color: $color-one-400;
-			color: $color-one-400;
+			border-color: $color-one-500;
+			color: $color-one-600;
 		}
 
 		&:active {
@@ -74,7 +74,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: $color-400;
+			background-color: $color-600;
 		}
 
 		&:active {
@@ -344,6 +344,10 @@
 		td {
 			border: 0;
 		}
+	}
+
+	&.table-small {
+		@include font-size-400;
 	}
 
 	&.table-stat {

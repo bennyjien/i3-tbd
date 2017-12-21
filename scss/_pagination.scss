@@ -1,11 +1,9 @@
 @at-root {
 	.pagination-nav {
 		align-items: center;
-		border-top: 1px solid $color-border;
 		display: flex;
 		justify-content: space-between;
 		margin-top: 24px;
-		padding-top: 24px;
 
 		.a {
 			background-color: $color-one-500;

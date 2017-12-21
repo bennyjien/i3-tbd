@@ -48,7 +48,7 @@
 
 button.mfp-close {
 	border-radius: 50%;
-	color: $white !important;
+	color: $color-500 !important;
 	font-family: Arial;
 	font-style: normal;
 	font-size: 24px;
@@ -57,7 +57,7 @@ button.mfp-close {
 	opacity: 1;
 	padding: 0;
 	position: absolute;
-	right: 24px;
+	right: 12px;
 	text-align: center;
 	text-decoration: none;
 	transition: all 0.2s ease-out;
@@ -66,7 +66,8 @@ button.mfp-close {
 
 	&:hover,
 	&:focus {
-		background-color: $color-one-400;
+		background-color: $color-one-500;
+		color: $white !important;
 	}
 
 	&:active {

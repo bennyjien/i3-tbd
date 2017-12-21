@@ -1,15 +1,23 @@
 @at-root {
-	.popup-container {}
-	.popup-header {}
-	.popup-content {}
-	.popup-footer {}
-}
-
-@at-root {
-	.popup-inline-container {
+	.popup-inline {
 		background-color: $white;
+		margin: 0 auto;
+		max-width: 480px;
 		padding: 32px;
+		position: relative;
 	}
 
-	.popup-inline-header {}
+	.popup-inline-header {
+		border-bottom: 1px solid $color-border-light;
+		margin-bottom: 24px;
+		padding-bottom: 8px;
+
+		.title {
+			@include font-size-h2;
+			font-family: $display;
+			font-weight: 400;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
 }

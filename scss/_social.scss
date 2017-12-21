@@ -23,42 +23,107 @@
 
 @at-root {
 	.social-share {
+		margin-top: 24px;
 
-		.list {
-			display: flex;
-		}
+		&.social-share-sticky {
 
-		.item {
-			flex: 0 0 auto;
-
-			&:not(:last-child) {
-				margin-right: 8px;
+			@include breakpoint(jumper) {
+				margin-left: 32px;
+				margin-top: 0;
+				position: sticky;
+				top: 24px;
 			}
 
-			a {
-				color: $color-text;
+			.share {
+
+				@include breakpoint(jumper) {
+					display: block;
+				}
+
+				&:not(:last-child) {
+
+					@include breakpoint(jumper) {
+						margin-bottom: 8px;
+						margin-right: 0;
+					}
+				}
+			}
+
+			.count {
+
+				@include breakpoint(jumper) {
+					bottom: auto;
+					left: 30px;
+					top: 10px;
+				}
+			}
+		}
+
+		.share {
+			background-color: $color-100;
+			border: 1px solid $color-border;
+			border-radius: 24px;
+			color: $color-text-light;
+			display: inline-block;
+			height: 40px;
+			position: relative;
+			text-align: center;
+			transition: all 0.2s ease;
+			width: 40px;
+
+			&:not(:last-child) {
+				margin-right: 4px;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $white;
+				border-color: $color-border-dark;
+				color: $color-one-500;
+
+				&.share-love {
+					color: $color-two-500;
+				}
+
+				&.share-facebook {
+					color: $color-facebook;
+				}
+
+				&.share-twitter {
+					color: $color-twitter;
+				}
+
+				&.share-googleplus {
+					color: $color-googleplus;
+				}
+
+				&.share-pinterest {
+					color: $color-pinterest;
+				}
 			}
 		}
 
 		.icon {
+			height: 100%;
+			padding: 8px;
+			width: 100%;
+		}
+
+		.count {
+			@include ellipsis;
+			@include font-size-100;
+			background-color: $color-two-500;
+			border-radius: 10px;
+			bottom: -10px;
+			color: $white;
 			height: 20px;
-			width: 20px;
-
-			&.icon-facebook {
-				fill: $color-facebook;
-			}
-
-			&.icon-twitter {
-				fill: $color-twitter;
-			}
-
-			&.icon-googleplus {
-				fill: $color-googleplus;
-			}
-
-			&.icon-pinterest {
-				fill: $color-pinterest;
-			}
+			left: 10px;
+			line-height: 20px;
+			min-width: 20px;
+			max-width: 32px;
+			padding: 0 4px;
+			position: absolute;
+			text-align: center;
 		}
 	}
 }

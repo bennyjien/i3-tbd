@@ -79,8 +79,12 @@
       }
 
       .title {
-        @include font-size-h4;
+        @include font-size-h5;
         margin-bottom: 4px;
+
+        @include breakpoint(crawler) {
+          @include font-size-h4;
+        }
 
         @include breakpoint(runner) {
           @include font-size-h2;

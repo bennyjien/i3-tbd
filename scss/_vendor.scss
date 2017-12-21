@@ -342,20 +342,34 @@
 
 @at-root {
 	.vendor-arranger {
+		@include font-size-400;
 		align-items: center;
 		border-bottom: 1px solid $color-border;
-		display: none;
+		display: flex;
+		flex-wrap: wrap;
 		margin-bottom: 24px;
 		padding-bottom: 16px;
 
-		@include breakpoint(runner) {
-			display: flex;
+		@include breakpoint(crawler) {
+			@include font-size-500;
+		}
+
+		@include breakpoint(walker) {
+			flex-wrap: nowrap;
 		}
 	}
 
 	.vendor-arranger-search {
-		flex: 1 1 0;
-		margin-right: 8px;
+		flex: 1 1 auto;
+		margin-bottom: 8px;
+		width: 100%;
+
+		@include breakpoint(walker) {
+			flex: 1 1 0;
+			margin-bottom: 0;
+			margin-right: 8px;
+			width: auto;
+		}
 
 		.input {
 			padding: 8px;
@@ -366,27 +380,36 @@
 		align-items: center;
 		display: flex;
 		flex: 2 1 0;
+		max-width: 100%;
 
 		.selects {
 			display: flex;
 			flex: 1 1 0;
+			max-width: 100%;
 		}
 
 		.select {
-			flex: 1 1 0;
+			flex: 1 1 auto;
 			height: auto;
+			min-width: 0;
 			padding: 8px;
+			width: 33.33334%;
 
-			&:not(:last-child) {
+			&:not(:last-of-type) {
 				margin-right: 8px;
 			}
 		}
 	}
 
 	.vendor-arranger-sort {
+		display: none;
 		flex: 0 0 auto;
 		margin-left: auto;
 		padding-left: 48px;
+
+		@include breakpoint(runner) {
+			display: block;
+		}
 	}
 }
 
@@ -481,7 +504,7 @@
 		min-width: none;
 
 		&:not(:last-child) {
-			margin-right: 24px;
+			margin-right: 32px;
 		}
 
 		.meta {
@@ -498,7 +521,6 @@
 
 			.value {
 				display: block;
-				font-weight: 700;
 				overflow: hidden;
 			}
 		}

@@ -124,7 +124,8 @@
 					<ul class="list">
 						<li class="<!-- $vendor-nav -->"><a href="#" class="link"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-vendor" /></svg> Vendor Directory</a></li>
 						<li class="<!-- $events-nav -->"><a href="event.html" class="link">Events</a></li>
-						<li class="<!-- $account-nav -->"><a href="account-dashboard.html" class="link">My Account</a></li>
+						<li class="<!-- $account-nav -->"><a href="#popup-login" class="link js-popup-link">Login</a></li>
+						<li class="<!-- $account-nav -->"><a href="account-gateway.html" class="link">Register</a></li>
 						<li class="<!-- $article-submit-nav -->"><a href="article-submit.html" class="link">Submit Your Story</a></li>
 						<li class="<!-- $shop-nav -->"><a href="#" class="link">Shop</a></li>
 					</ul>
@@ -152,7 +153,7 @@
 								<ul class="list">
 									<li class="<!-- $shop-nav -->"><a href="#" class="link">Shop</a></li>
 									<li class="<!-- $article-submit-nav -->"><a href="article-submit.html" class="link">Submit Your Story</a></li>
-									<li class="<!-- $account-nav -->"><a href="account-dashboard.html" class="link">My Account</a></li>
+									<li class="<!-- $account-nav -->"><a href="#popup-login" class="link js-popup-link">Login</a> / <a href="account-gateway.html" class="link">Register</a></li>
 								</ul>
 							</nav>
 
@@ -177,6 +178,37 @@
 
 				</div>
 			</header>
+
+			<div id="popup-login" class="popup-login popup-inline mfp-hide">
+				<div class="popup-inline-header">
+					<h4 class="title">Login</h4>
+				</div>
+				<div class="popup-inline-body">
+					<div class="account-login">
+						<div class="account-login-form">
+							<div class="form-text">
+								<label class="label">Email Address</label>
+								<input type="email" class="input">
+							</div>
+							<div class="form-text">
+								<label class="label">Password</label>
+								<input type="password" class="input">
+							</div>
+							<div class="form-submit">
+								<button class="button button-full">Login</button>
+							</div>
+						</div>
+						<div class="account-login-forgot">
+							<a href="#" class="link">Forgot your password?</a>
+						</div>
+					</div>
+					<hr>
+					<div class="social-login">
+						<a href="#" class="button button-facebook"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-facebook-square" /></svg> Login with Facebook</a>
+						<a href="#" class="button button-googleplus"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-social-googleplus-square" /></svg> Login with Google+</a>
+					</div>
+				</div>
+			</div>
 
 			<div id="site-search" class="site-search">
 				<div class="wrapper">
