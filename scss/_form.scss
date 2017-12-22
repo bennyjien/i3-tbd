@@ -313,6 +313,7 @@
 
 		.label {
 			display: inline-block;
+			font-weight: 700;
 		}
 
 		.inputs {
@@ -710,6 +711,14 @@
 
 			@include breakpoint(crawler) {
 				flex: 0 1 50%;
+			}
+		}
+	}
+
+	.form-group.form-group-3-col {
+		[class^="form-"] {
+			@include breakpoint(crawler) {
+				flex: 0 1 33.33333333333333%;
 			}
 		}
 	}
