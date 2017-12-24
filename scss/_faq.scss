@@ -1,15 +1,64 @@
 @at-root {
-  .faq-item {
-    display: block;
-    margin-bottom: 32px;
+  .faq-page-content {
+    @include breakpoint(walker) {
+			display: flex;
+    }
+    
+    .faq-image {
+      display: block;
+      width: 100%;
+      margin-bottom: 32px;
 
-    &:last-child {
-      margin-bottom: 0;
+      @include breakpoint(walker) {
+        width: 800px;
+        margin-bottom: 0;
+      }
+
+      .image {
+        display: block;
+        width: 100%;
+      }
     }
 
-    .question {
-      font-weight: 700;
-      margin-bottom: 8px;
+    .faq-items {
+      margin-top: -12px;
+      .faq-items-header {
+        display: block;
+        margin-bottom: 32px;
+  
+        .title {
+          @include font-size-800;
+          font-family: $display;
+          font-weight: 400;
+          text-transform: uppercase;
+    
+          @include breakpoint(crawler) {
+            @include font-size-900;
+          }
+    
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+        }
+      }
+
+      @include breakpoint(walker) {
+        padding-left: 40px;
+      }
+    }
+
+    .faq-item {
+      display: block;
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+  
+      .question {
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
     }
   }
 }
