@@ -29,6 +29,7 @@
 
 	.account-gateway-header {
 		margin-bottom: 24px;
+		color: $color-100;
 
 		.title {
 			@include font-size-800;
@@ -220,5 +221,11 @@
 		@include breakpoint(runner) {
 			display: none;
 		}
+	}
+}
+
+@at-root {
+	.aside-button-login {
+		margin-top: 12px;
 	}
 }
