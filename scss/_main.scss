@@ -9,6 +9,11 @@
 @at-root {
 	.main-aside {
 		@include aside;
+		
+		.float-aside {
+			position: sticky;
+			top: 24px;
+		}
 
 		&.main-aside-left {
 			@include aside-left;

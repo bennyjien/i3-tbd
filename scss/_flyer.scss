@@ -1,5 +1,8 @@
 @at-root {
-  .flyer-widget {}
+  .flyer-widget {
+    position: sticky;
+    top: 24px;
+  }
 
   .flyer-widget-link {
 
