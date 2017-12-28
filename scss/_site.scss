@@ -321,7 +321,7 @@
 			}
 		}
 
-		.item {
+		.item, .menu-item {
 
 			a {
 				@include font-size-400;
