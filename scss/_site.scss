@@ -250,7 +250,7 @@
 			padding: 8px 0;
 		}
 
-		.item {
+		.item, .menu-item {
 			min-width: 0;
 
 			&:not(:last-child) {

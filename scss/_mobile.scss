@@ -64,7 +64,7 @@
 			text-transform: uppercase;
 		}
 
-		.item {
+		.item, .menu-item {
 			border-bottom: 1px solid $color-border-light;
 
 			&.item-current {
