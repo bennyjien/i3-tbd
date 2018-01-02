@@ -69,13 +69,20 @@
 
 			&.item-current {
 
-				> .link {
+				> a {
+					color: $color-one-500;
+				}
+			}
+
+			&.current-menu-item {
+				
+				> a {
 					color: $color-one-500;
 				}
 			}
 		}
 
-		.link {
+		a {
 			@include font-size-400;
 			color: $color-text;
 			display: block;

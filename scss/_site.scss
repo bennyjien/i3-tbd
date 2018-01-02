@@ -261,15 +261,15 @@
 				}
 			}
 
-			&.item-current {
+			&.current-menu-item {
 
-				.link {
+				a {
 					color: $color-one-600;
 				}
 			}
 		}
 
-		.link {
+		a {
 			@include ellipsis;
 			@include font-size-400;
 			color: $color-text;
