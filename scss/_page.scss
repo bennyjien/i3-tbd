@@ -32,3 +32,11 @@
 
 	.page-single-footer {}
 }
+
+@at-root {
+	.wordpress-post {
+		img {
+			margin-bottom: 24px;
+		}
+	}
+}
