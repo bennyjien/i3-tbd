@@ -229,3 +229,21 @@
 		margin-top: 12px;
 	}
 }
+
+@at-root {
+	.wp-message {
+		display: block;
+		padding: 16px;
+		background-color: $color-400;
+		border-radius: 4px;
+		font-size: $font-size-300;
+	}
+
+	.wp-message.success {
+		background-color: $color-success-light;
+	}
+
+	.wp-message.error {
+		background-color: $color-alert-light;
+	}
+}
