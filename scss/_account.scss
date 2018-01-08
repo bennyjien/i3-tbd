@@ -231,7 +231,7 @@
 }
 
 @at-root {
-	.wp-message {
+	.wp-message, p.wp-message {
 		display: block;
 		padding: 16px;
 		background-color: $color-400;
