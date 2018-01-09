@@ -31,7 +31,7 @@
 		margin-bottom: 24px;
 		color: $color-100;
 
-		.title {
+		h1, h2, h3, h4, h5, h6 {
 			@include font-size-800;
 			font-family: $display;
 			font-weight: 400;
@@ -43,11 +43,16 @@
 			}
 		}
 
-		.item {
-			@include font-size-500;
+		ul {
+			padding-left: 24px;
+			text-indent: -24px;
 
-			@include breakpoint(crawler) {
-				@include font-size-600;
+			li {
+				@include font-size-500;
+	
+				@include breakpoint(crawler) {
+					@include font-size-600;
+				}
 			}
 		}
 	}
