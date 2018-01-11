@@ -460,9 +460,11 @@
 
 @at-root {
 	.article-post {
+		line-height: 1.625;
 
 		@include breakpoint(crawler) {
 			@include font-size-600;
+			line-height: 1.55556;
 		}
 	}
 }

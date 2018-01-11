@@ -466,7 +466,7 @@
 		</div>
 	*/
 	const formFileFunction = function() {
-		const $formFile = document.querySelectorAll('.js-form-file');
+		const $formFile = document.querySelectorAll('.js-form-file .input');
 
 		$formFile.forEach(element => {
 			const $input = element.querySelector('.form-file-input'),
