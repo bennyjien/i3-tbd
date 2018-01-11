@@ -185,3 +185,10 @@
 		}
 	}
 }
+
+@at-root {
+	.comment--like, p.comment--like {
+		margin-top: -24px;
+		margin-bottom: 24px;
+	}
+}
