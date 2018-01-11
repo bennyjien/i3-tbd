@@ -75,6 +75,10 @@
 				margin-right: 4px;
 			}
 
+			&.share-love.is-loved {
+				color: $color-two-500;
+			}
+
 			&:hover,
 			&:focus {
 				background-color: $white;
