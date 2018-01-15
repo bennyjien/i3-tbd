@@ -629,6 +629,10 @@
 
 @at-root {
 	.save-vendor.is-loved {
-		background-color: $color-two-500;
+		background-color: $color-two-400;
+	}
+
+	.save-vendor.is-loved:hover {
+		background-color: $color-two-400;
 	}
 }
