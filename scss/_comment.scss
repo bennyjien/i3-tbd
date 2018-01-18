@@ -187,6 +187,12 @@
 }
 
 @at-root {
+	.comment-awaiting-moderation {
+		line-height: 1.7;
+		font-size: $font-size-400;
+		color: $color-alert-dark;
+	}
+
 	.comment--like, p.comment--like {
 		margin-top: -18px;
 

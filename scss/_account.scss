@@ -243,6 +243,10 @@
 		border-radius: 4px;
 		font-size: $font-size-300;
 		margin-bottom: 20px;
+
+		ul {
+			padding-left: 12px;
+		}
 	}
 
 	.wp-message.success {
