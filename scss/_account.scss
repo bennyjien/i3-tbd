@@ -256,4 +256,26 @@
 	.wp-message.error {
 		background-color: $color-alert-light;
 	}
+
+	#password-strength {
+		display: inline-block;
+		font-size: $font-size-100;
+		font-weight: 400;
+		padding: 2px 8px;
+		border-radius: 5px;
+		color: $color-100;
+		margin-left: 4px;
+
+		&.short, &.bad {
+			background-color: $color-alert-dark;
+		}
+
+		&.good {
+			background-color:  $color-warning;
+		}
+
+		&.strong {
+			background-color:  $color-success-dark;
+		}
+	}
 }
