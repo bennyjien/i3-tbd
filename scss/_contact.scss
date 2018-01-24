@@ -52,6 +52,23 @@
 		}
 	}
 
+	.contact_form {
+		.form-action {
+			display: block;
+			width: 100%;
+			position: relative;
+			text-align: center;
+			margin-bottom: 12px;
+
+			.ajax-loader {
+				display: block;
+				margin: -27px auto 0;
+				position: relative;
+				z-index: 1;
+			}
+		}
+	}
+
 	.contact-form-box {
 		display: block;
 		float: right;
@@ -68,5 +85,11 @@
 		.label {
 			margin-bottom: 6px;
 		}
+	}
+}
+
+@at-root {
+	div.wpcf7-response-output {
+    margin: 2em 0 0;
 	}
 }

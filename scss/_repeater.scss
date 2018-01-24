@@ -1,0 +1,42 @@
+@at-root {
+	.page-single-container {}
+
+	.page-single-header {
+		display: block;
+		text-align: center;
+		margin-bottom: 32px;
+
+		.title {
+			@include font-size-800;
+			font-family: $display;
+			font-weight: 400;
+			text-transform: uppercase;
+
+			@include breakpoint(crawler) {
+				@include font-size-900;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+
+		.subtitle {
+			color: $color-500;
+		}
+	}
+
+	.page-single-content {
+		padding-bottom: 32px;
+	}
+
+	.page-single-footer {}
+}
+
+@at-root {
+	.wordpress-post {
+		img {
+			margin-bottom: 24px;
+		}
+	}
+}
