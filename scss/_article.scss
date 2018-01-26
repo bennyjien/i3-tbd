@@ -19,6 +19,10 @@
 				@include font-size-500;
 			}
 		}
+
+		&.no-margin-bottom {
+			margin-bottom: 0;
+		}
 	}
 
 	.article-archive-footer {
@@ -454,6 +458,116 @@
 			height: 13px;
 			width: 13px;
 			position: relative;
+
+			&.color-black {
+
+				background-color: #000000;
+			}
+
+			&.color-brown {
+
+				background-color: #8b4513;
+			}
+
+			&.color-chilli-red {
+
+				background-color: #c21807;
+			}
+
+			&.color-dark-green {
+
+				background-color: #314f40;
+			}
+
+			&.color-dark-red {
+
+				background-color: #8b0000;
+			}
+
+			&.color-dusk-blue {
+
+				background-color: #7da1bf;
+			}
+
+			&.color-gold {
+
+				background-color: #cdad00;
+			}
+
+			&.color-hot-pink {
+
+				background-color: #ff69b4;
+			}
+
+			&.color-ligh-tcoral {
+
+				background-color: #f08080;
+			}
+
+			&.color-light-golden-rod {
+
+				background-color: #ffec8b;
+			}
+
+			&.color-midnight-blue {
+
+				background-color: #072949;
+			}
+
+			&.color-mint-green {
+
+				background-color: #bff6c5;
+			}
+
+			&.color-orange {
+
+				background-color: #ffa500;
+			}
+
+			&.color-pale-blue {
+
+				background-color: #afeeee;
+			}
+
+			&.color-pink {
+
+				background-color: #f8c5d4;
+			}
+
+			&.color-purple {
+
+				background-color: #a020f0;
+			}
+
+			&.color-red {
+
+				background-color: #ff0000;
+			}
+
+			&.color-rose-quartz {
+
+				background-color: #f7cac9;
+			}
+
+			&.color-silver {
+
+				background-color: #cccccc;
+			}
+
+			&.color-white {
+
+				background-color: #ffffff;
+			}
+
+			&.color-burgundy {
+
+				background-color: #8C001A;
+			}
+
+			&.color-lavender {
+
+				background-color: #ECC8EC;
+			}
 		}
 	}
 }

@@ -92,4 +92,234 @@
 	div.wpcf7-response-output {
     margin: 2em 0 0;
 	}
+	span.wpcf7-not-valid-tip {
+    color: $color-alert-dark;
+		font-size: 13px;
+		margin-top: 4px;
+    font-weight: normal;
+    display: block;
+	}
+	.additional-field {
+		&.is-hidden {
+			display: none;
+		}
+	}
+	.wpcf7 .tema-warna .wpcf7-form-control {
+		display:block;
+    margin-top:.25em;
+    width:100%
+	}
+	.wpcf7 .tema-warna .wpcf7-form-control:after,.wpcf7 .tema-warna .wpcf7-form-control:before{
+    content:"";
+    display:table
+	}
+	.wpcf7 .tema-warna .wpcf7-form-control:after {
+    clear:both
+	}
+	.wpcf7 .tema-warna .wpcf7-list-item {
+    display:block;
+		float:left;
+		margin-bottom:.25em
+	}
+	.wpcf7 .tema-warna input[type=checkbox]{
+    display:none
+	}
+	.wpcf7 .tema-warna input[type=checkbox]+span{
+    background-color:#F0F0ED;
+    border-radius:4px;
+    color:#999996;
+    cursor:pointer;
+    display:inline-block;
+    margin-bottom:0;
+    padding:.25em .75em;
+    -webkit-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out
+	}
+	.wpcf7 .tema-warna input[type=checkbox]+span:before{
+    content:"";
+    background-color:#4D4D4A;
+    border-radius:50%;
+    display:inline-block;
+    height:12px;
+    margin-right:.375em;
+    -webkit-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+    width:12px
+	}
+	.wpcf7 .tema-warna input[type=checkbox]+span:hover{
+    background-color:#E5E5E1
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value=Black]+span:before{
+    background-color:#000
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value=Brown]+span:before{
+    background-color:#8b4513
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value="Dark Green"]+span:before{
+    background-color:#006400
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value="Dark Red"]+span:before{
+    background-color:#8b0000
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value=Gold]+span:before{
+    background-color:#cdad00
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value="Hot Pink"]+span:before{
+    background-color:#ff69b4
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value="Light Coral"]+span:before{
+    background-color:#f08080
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value="Light Goldenrod"]+span:before{
+    background-color:#ffec8b
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value="Midnight Blue"]+span:before{
+    background-color:#191970
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value="Mint Green"]+span:before{
+    background-color:#bdfcc9
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value=Orange]+span:before{
+    background-color:orange
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value="Pale Blue"]+span:before{
+    background-color:#afeeee
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value=Pink]+span:before{
+    background-color:pink
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value=Purple]+span:before{
+    background-color:#a020f0
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value=Red]+span:before{
+    background-color:red
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value=Silver]+span:before{
+    background-color:#ccc
+	}
+	.wpcf7 .tema-warna input[type=checkbox][value=White]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked+span{
+    text-shadow:0 0 6px rgba(0,0,0,.64)
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Black]+span{
+    background-color:#000;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Black]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Brown]+span{
+    background-color:#8b4513;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Brown]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Dark Green"]+span{
+    background-color:#006400;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Dark Green"]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Dark Red"]+span{
+    background-color:#8b0000;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Dark Red"]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Gold]+span{
+    background-color:#cdad00;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Gold]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Hot Pink"]+span{
+    background-color:#ff69b4;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Hot Pink"]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Light Coral"]+span{
+    background-color:#f08080;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Light Coral"]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Light Goldenrod"]+span{
+    background-color:#ffec8b;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Light Goldenrod"]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Midnight Blue"]+span{
+    background-color:#191970;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Midnight Blue"]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Mint Green"]+span{
+    background-color:#bdfcc9;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Mint Green"]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Orange]+span{
+    background-color:orange;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Orange]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Pale Blue"]+span{
+    background-color:#afeeee;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value="Pale Blue"]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Pink]+span{
+    background-color:pink;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Pink]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Purple]+span{
+    background-color:#a020f0;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Purple]+span:before{
+    background-color:#fff
+}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Red]+span{
+    background-color:red;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Red]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Silver]+span{
+    background-color:#ccc;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=Silver]+span:before{
+    background-color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=White]+span{
+    background-color:#E5E5E1;
+    color:#fff
+	}
+	.wpcf7 .tema-warna input[type=checkbox]:checked[value=White]+span:before{
+	background-color:#fff
+	}
 }
