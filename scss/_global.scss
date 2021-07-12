@@ -53,6 +53,19 @@
 		width: 100%;
 	}
 
+	&.button-alt {
+		background-color: $color-two-500;
+
+		&:visited {
+			background-color: $color-two-500;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $color-two-400;
+		}
+	}
+
 	&.button-line {
 		background-color: transparent;
 		border-color: $color-one-400;
@@ -79,6 +92,19 @@
 
 		&:active {
 			background-color: $color-600;
+		}
+	}
+
+	&.button-darkgray {
+		background-color: $color-700;
+
+		&:hover,
+		&:focus {
+			background-color: $color-800;
+		}
+
+		&:active {
+			background-color: $color-800;
 		}
 	}
 
